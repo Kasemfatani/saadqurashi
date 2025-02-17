@@ -1,0 +1,105 @@
+.countries-section {
+    padding: 56px 0 32px 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    h3 {
+        color: #185A7D;
+        font-size: 32px;
+        font-weight: 700;
+        margin-bottom: 8px;
+        text-align: center;
+    }
+
+    h4 {
+        color: #2B9FD8;
+        font-size: 20px;
+        font-weight: 400;
+        margin-bottom: 25px;
+        text-align: center;
+
+    }
+
+    @media screen and (max-width: 767px) {
+        padding: 56px 0;
+    }
+
+    .marq {
+        .part-cont {
+            width: 180px;
+            height: 180px;
+            overflow: hidden;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #F6F7F6;
+
+            @media screen and (max-width: 600px) {
+                width: 180px;
+                height: 180px;
+            }
+
+            img {
+                width: 80%;
+                height: auto;
+                max-height: 80%;
+            }
+        }
+    }
+}
+
+.ready-cont {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+
+
+    .ready {
+        display: flex;
+        padding: 56px 0px;
+        align-items: center;
+        flex-direction: column;
+        background-color: rgba(100, 138, 162, .8);
+
+        h2 {
+            font-size: 32px;
+            font-weight: 700;
+            color: $white;
+            margin-bottom: 16px;
+        }
+
+        p {
+            font-size: 16px;
+            font-weight: 400;
+            color: $white;
+            margin-bottom: 24px;
+        }
+        
+        a:hover {
+            background-color: $main;
+            color: $white;
+        }
+    }
+}
+
+        .main-link-sec {
+            height: 56px;
+            border-radius: 11px;
+            background-color: $sec;
+            padding: 0 24px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: fit-content;
+            color: $white;
+            flex-shrink: 0;
+            font-size: 16px;
+            font-weight: 600;
+            text-align: center;
+            text-wrap: nowrap;
+        }
