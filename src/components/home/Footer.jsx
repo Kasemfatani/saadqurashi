@@ -16,6 +16,7 @@ export default function Footer() { // Defining the main functional component nam
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const [data, setData] = useState([]);
+    const [whatsapp , setWhatsapp] = useState('+966506578868');
     const [social , setSocial] = useState([]);
     useEffect(() => {
         setLoading(true);
@@ -30,6 +31,7 @@ export default function Footer() { // Defining the main functional component nam
                 .then(response => {
                     setData(response.data.data);  // Set the response data to state
                     setLoading(false);  // Set loading to false
+                    setWhatsapp(response.data.data.filter(item => item.type == 'mobile')[0].value.split(' ').join(''));
                 })
                 .catch(error => {
                     setError(error);  // Handle any errors
@@ -50,10 +52,11 @@ export default function Footer() { // Defining the main functional component nam
         }
     }, []);
     console.log(social);
+    console.log(whatsapp);
     
     return (
         <footer className={`${lang === 'en' ? 'ltr' : 'rtl'}`}> {/* Main footer container with padding and background color */}
-            <a href="https://wa.me/+966506578868?text=Good%20Morning%20I-Masira" className="fixed-what">
+            <a href={`https://wa.me/${whatsapp}?text=Good%20Morning%20I-Masira`} className="fixed-what">
                 <i className="fa-brands fa-whatsapp"></i>
             </a>
             <div className="container m-auto"> {/* Container for the footer content */}
