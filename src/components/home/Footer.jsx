@@ -36,7 +36,7 @@ export default function Footer() { // Defining the main functional component nam
     ]
     return (
         <footer className={`${lang === 'en' ? 'ltr' : 'rtl'}`}> {/* Main footer container with padding and background color */}
-            <a href="https://wa.me/?text=Good%20Morning%20I-Masira" className="fixed-what">
+            <a href="https://wa.me/+966506578868?text=Good%20Morning%20I-Masira" className="fixed-what">
                 <i className="fa-brands fa-whatsapp"></i>
             </a>
             <div className="container m-auto"> {/* Container for the footer content */}

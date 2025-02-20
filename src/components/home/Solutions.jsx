@@ -46,7 +46,6 @@ export default function Solutions() {
                 });
         }
     }, []);
-    console.log(data);
     return (
         <div className="blogs" style={{ direction: `ltr` }} id='blogs'>
             {
