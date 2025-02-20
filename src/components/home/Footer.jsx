@@ -5,35 +5,52 @@ import Link from 'next/link';
 import Image from 'next/image';
 import logo from '/public/footerlogo.svg'
 import { usePathname } from 'next/navigation';
+import axios from 'axios';
+import { API_BASE_URL } from '@/lib/apiConfig';
 
 
 
 export default function Footer() { // Defining the main functional component named 'Footer'.
 
     let [lang, setLang] = useState('en');
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+    const [data, setData] = useState([]);
+    const [social , setSocial] = useState([]);
     useEffect(() => {
+        setLoading(true);
         if (typeof window !== 'undefined') {
-            if (localStorage.getItem('lang') === 'ar' || localStorage.getItem('lang') === 'en') {
-                setLang(localStorage.getItem('lang'));
-            }
-            else {
-                localStorage.setItem('lang', 'en');
-                setLang('en');
-            }
-        }
-    }, [lang]);
-    const contactData = [
-        { type: "location", value: "Al-Zahra District, Jeddah, KSA" },
-        { type: "email", value: "info@i-Masira.com" },
-        { type: "mobile", value: "+966580121025" },
-    ]
-    const data = [
+            // Define the headers with the selected language
+            setLang(localStorage.getItem('lang'));
+            const headers = {
+                lang: localStorage.getItem('lang'), // Change language dynamically based on state
+            };
+            // Fetch data from the API with Axios
+            axios.get(`${API_BASE_URL}/landing/home/contacts` , {  headers: headers,  })
+                .then(response => {
+                    setData(response.data.data);  // Set the response data to state
+                    setLoading(false);  // Set loading to false
+                })
+                .catch(error => {
+                    setError(error);  // Handle any errors
+                    console.error('Error fetching data:', error);
+                    setLoading(false)
+                });
+            axios.get(`${API_BASE_URL}/landing/home/social-media` , {  headers: headers,  })
+                .then(res => {
+                    setSocial(res.data.data);  // Set the response data to state
+                    setLoading(false);  // Set loading to false
+                })
+                .catch(error => {
+                    setError(error);  // Handle any errors
+                    console.error('Error fetching data:', error);
+                    setLoading(false)
+                });
 
-        { type: "facebook", value: "https://www.facebook.com/masira.sa" },
-        { type: "instagram", value: "https://www.instagram.com/masira.sa" },
-        { type: "twitter", value: "https://twitter.com/masira_sa" },
-        { type: "linkedin", value: "https://www.linkedin.com/company/masira-sa/" }
-    ]
+        }
+    }, []);
+    console.log(social);
+    
     return (
         <footer className={`${lang === 'en' ? 'ltr' : 'rtl'}`}> {/* Main footer container with padding and background color */}
             <a href="https://wa.me/+966506578868?text=Good%20Morning%20I-Masira" className="fixed-what">
@@ -48,7 +65,7 @@ export default function Footer() { // Defining the main functional component nam
                         <div className="social-links">
                             <div className="social">
                                 {
-                                    data?.map((item, index) =>
+                                    social?.map((item, index) =>
                                         <Link href={item.value} key={index} target='_blank'><i className={`fa-brands fa-${item.type}`} key={index}></i></Link>
                                     )
                                 }
@@ -69,8 +86,10 @@ export default function Footer() { // Defining the main functional component nam
                         <h3>{lang === 'en' ? 'Contact us' : 'اتصل بنا'}</h3>
                         <ul>
                             {
-                                contactData?.map((item, index) =>
-                                    <li key={index}><Link href={item.type == "mobile" ? `tel:${item.value}` : item.type == "email" ? `mailto:${item.value}` : "#footer"} key={index}>{item.value}</Link></li>
+                                data?.map((item, index) =>
+                                    <li key={index}>
+                                        <Link href={item.type == "mobile" ? `tel:${item.value}` : item.type == "email" ? `mailto:${item.value}` : "#footer"} key={index}>{item.value}</Link>
+                                    </li>
                                 )
                             }
                         </ul>
