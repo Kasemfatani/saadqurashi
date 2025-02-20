@@ -19,12 +19,12 @@ export default function Marq({mainTitle , subTitle , data ,isReverse}) { // Defi
     }, [lang]);
 
     const ReviewCard = ({
-        img,
+        image,
     }) => {
         return (
             <figure className={cn()} >
                 <div className="part-cont" >
-                    <Image src={img} alt="Mazar" width={200} height={200} />
+                    <Image src={image} alt="Mazar" width={200} height={200} />
                 </div>
             </figure>
         );

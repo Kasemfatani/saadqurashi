@@ -15,6 +15,8 @@ export default function About() {
         { img: img4, title: "الشفافية", desc: "بناء علاقات متينة قائمة على المصداقية والثقة." }
     ]
 
+
+    
     return (
         <div className="about" >
             <div className="container m-auto">

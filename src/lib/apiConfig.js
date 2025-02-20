@@ -1,4 +1,4 @@
-const API_BASE_URL = 'https://dash.mzarapp.com/api';
+const API_BASE_URL = 'https://app.i-masira.com/api';
 
 const API_ENDPOINTS = {
   REGISTER: '/auth/register',

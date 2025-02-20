@@ -4,32 +4,88 @@ import Image from 'next/image'
 
 export default function Loading() {
     return (
-        // <div className='loading-page'>
-        //     <Image src={footerimg} alt='logo' className='loading-logo' />
-        // </div>
-
-
-
-        // <div id="page">
-        //     <div id="container">
-        //         <div id="ring"></div>
-        //         <div id="ring"></div>
-        //         <div id="ring"></div>
-        //         <div id="ring"></div>
-        //         <div id="h3">loading</div>
-        //     </div>
-        // </div>
-
-
+       
         <div className="loading-cont">
-            <div className="loader">
-                <div className="crystal"></div>
-                <div className="crystal"></div>
-                <div className="crystal"></div>
-                <div className="crystal"></div>
-                <div className="crystal"></div>
-                <div className="crystal"></div>
+            
+            <div className="section-banner">
+                <div id="star-1">
+                    <div className="curved-corner-star">
+                        <div id="curved-corner-bottomright"></div>
+                        <div id="curved-corner-bottomleft"></div>
+                    </div>
+                    <div className="curved-corner-star">
+                        <div id="curved-corner-topright"></div>
+                        <div id="curved-corner-topleft"></div>
+                    </div>
+                </div>
+
+                <div id="star-2">
+                    <div className="curved-corner-star">
+                        <div id="curved-corner-bottomright"></div>
+                        <div id="curved-corner-bottomleft"></div>
+                    </div>
+                    <div className="curved-corner-star">
+                        <div id="curved-corner-topright"></div>
+                        <div id="curved-corner-topleft"></div>
+                    </div>
+                </div>
+
+                <div id="star-3">
+                    <div className="curved-corner-star">
+                        <div id="curved-corner-bottomright"></div>
+                        <div id="curved-corner-bottomleft"></div>
+                    </div>
+                    <div className="curved-corner-star">
+                        <div id="curved-corner-topright"></div>
+                        <div id="curved-corner-topleft"></div>
+                    </div>
+                </div>
+
+                <div id="star-4">
+                    <div className="curved-corner-star">
+                        <div id="curved-corner-bottomright"></div>
+                        <div id="curved-corner-bottomleft"></div>
+                    </div>
+                    <div className="curved-corner-star">
+                        <div id="curved-corner-topright"></div>
+                        <div id="curved-corner-topleft"></div>
+                    </div>
+                </div>
+
+                <div id="star-5">
+                    <div className="curved-corner-star">
+                        <div id="curved-corner-bottomright"></div>
+                        <div id="curved-corner-bottomleft"></div>
+                    </div>
+                    <div className="curved-corner-star">
+                        <div id="curved-corner-topright"></div>
+                        <div id="curved-corner-topleft"></div>
+                    </div>
+                </div>
+
+                <div id="star-6">
+                    <div className="curved-corner-star">
+                        <div id="curved-corner-bottomright"></div>
+                        <div id="curved-corner-bottomleft"></div>
+                    </div>
+                    <div className="curved-corner-star">
+                        <div id="curved-corner-topright"></div>
+                        <div id="curved-corner-topleft"></div>
+                    </div>
+                </div>
+
+                <div id="star-7">
+                    <div className="curved-corner-star">
+                        <div id="curved-corner-bottomright"></div>
+                        <div id="curved-corner-bottomleft"></div>
+                    </div>
+                    <div className="curved-corner-star">
+                        <div id="curved-corner-topright"></div>
+                        <div id="curved-corner-topleft"></div>
+                    </div>
+                </div>
             </div>
+
         </div>
     )
 }
