@@ -2,8 +2,11 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import heroImg from '/public/hero2.jpeg';
-import axios from 'axios';
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination"; import axios from 'axios';
 import Loading from '@/app/loading';
 import { API_BASE_URL } from '@/lib/apiConfig';
 export default function Hero() {
@@ -41,18 +44,77 @@ export default function Hero() {
         <div className="hero">
             {
                 loading ? <Loading /> :
-                    <>
-                        <Image src={data[0].image} alt="logo" className="hero-img image-bg" width={1000} height={1000} />
-                        <div className="overlay">
-                            <div className="heading">
-                                <h1>{data[0].title}</h1>
-                                <p>{data[0].description}</p>
-                                <div className="links">
-                                    <Link href="/#services" className='sec-link'>{lang === 'en' ? 'Explore now ' : 'استكشف الان'}</Link>
+                    <Swiper
+                        // navigation
+                        // pagination={{ type: "bullets", clickable: true }}
+                        spaceBetween={24}
+                        slidesPerView={7.5}
+                        autoplay={true}
+                        dir={lang === 'ar' ? 'rtl' : 'ltr'}
+                        loop={true}
+                        modules={[Autoplay, Navigation, Pagination]}
+                        breakpoints={{
+                            1400: {
+                                slidesPerView: 1,
+                            },
+                            1100: {
+                                slidesPerView: 1,
+                            },
+                            767: {
+                                slidesPerView: 1,
+                            },
+                            768: {
+                                slidesPerView: 1,
+                                autoplay: false,
+                            },
+                            640: {
+                                slidesPerView: 1,
+                                autoplay: false,
+                                spaceBetween: 16
+                            },
+                            100: {
+                                slidesPerView: 1,
+                                autoplay: false,
+                                spaceBetween: 16
+
+                            }
+                        }}
+                    >
+                        {data?.map((slider, index) =>
+                            <SwiperSlide key={index}>
+                                <div className="hero">
+                                    <Image src={slider.image} alt="logo" className="hero-img image-bg" width={1000} height={1000} />
+                                    <div className="overlay">
+                                        <div className="heading">
+                                            <h1>{slider.title}</h1>
+                                            <p>{slider.description}</p>
+                                            <div className="links">
+                                                <Link href="/#services" className='sec-link'>{lang === 'en' ? 'Explore now ' : 'استكشف الان'}</Link>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                    </>
+                            </SwiperSlide>
+                        )}
+                        {
+                            data.length === 1 ?
+                                <SwiperSlide>
+                                    <div className="hero">
+                                        <Image src={data[0].image} alt="logo" className="hero-img image-bg" width={1000} height={1000} />
+                                        <div className="overlay">
+                                            <div className="heading">
+                                                <h1>{data[0].title}</h1>
+                                                <p>{data[0].description}</p>
+                                                <div className="links">
+                                                    <Link href="/#services" className='sec-link'>{lang === 'en' ? 'Explore now ' : 'استكشف الان'}</Link>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </SwiperSlide>
+                                :null
+                        }
+                    </Swiper>
             }
         </div>
     );

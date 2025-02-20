@@ -7,10 +7,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import img from '/public/sol/1.svg'
-import img2 from '/public/sol/2.svg'
-import img3 from '/public/sol/3.svg'
-import img4 from '/public/sol/4.svg'
 import { ShineBorder } from '../magicui/shine-border';
 import Loading from '@/app/loading';
 import axios from 'axios';
