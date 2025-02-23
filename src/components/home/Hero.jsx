@@ -57,21 +57,6 @@ export default function Hero() {
                             1400: {
                                 slidesPerView: 1,
                             },
-                            1100: {
-                                slidesPerView: 1,
-                            },
-                            767: {
-                                slidesPerView: 1,
-                            },
-                            768: {
-                                slidesPerView: 1,
-                                autoplay: false,
-                            },
-                            640: {
-                                slidesPerView: 1,
-                                autoplay: false,
-                                spaceBetween: 16
-                            },
                             100: {
                                 slidesPerView: 1,
                                 autoplay: false,

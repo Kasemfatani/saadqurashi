@@ -51,8 +51,7 @@ export default function Footer() { // Defining the main functional component nam
 
         }
     }, []);
-    console.log(social);
-    console.log(whatsapp);
+   
     
     return (
         <footer className={`${lang === 'en' ? 'ltr' : 'rtl'}`}> {/* Main footer container with padding and background color */}
