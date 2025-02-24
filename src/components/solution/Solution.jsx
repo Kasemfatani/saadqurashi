@@ -16,7 +16,7 @@ export default function Solution() {
     const [error, setError] = useState(null);
     const [data, setData] = useState([]);
     const searchParams = useSearchParams()
-    const [solutionId, setSolutionId] = searchParams.get('id');
+    const solutionId = searchParams.get('id');
 
     useEffect(() => {
         setLoading(true);

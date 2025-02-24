@@ -1,11 +1,14 @@
 'use client'
 import React, { useEffect, useState } from 'react';
-import BlogsCards from './BlogsCards';
 import axios from 'axios';
 import { API_BASE_URL } from '@/lib/apiConfig';
+import Touch from '../home/Touch';
 import Loading from '@/app/loading';
+import MessVis from './MessVis'
+import AboutUs from './AboutUs'
+import Marq from '../home/Marq';
 
-export default function Content() {
+export default function About() {
 
     let [lang, setLang] = useState('en');
     const [loading, setLoading] = useState(true);
@@ -20,7 +23,7 @@ export default function Content() {
                 lang: localStorage.getItem('lang'), // Change language dynamically based on state
             };
             // Fetch data from the API with Axios
-            axios.get(`${API_BASE_URL}/landing/home/blogs`
+            axios.get(`${API_BASE_URL}/landing/home/about`
                 , {
                     headers: headers,
                 })
@@ -35,15 +38,18 @@ export default function Content() {
                 });
         }
     }, []);
-    return (
-        <div className="blogs" style={{ direction: `ltr` }} id='blogs'>
-            {
-                loading ? <Loading /> : data.length == 0 ? null :
-                    <div className="container m-auto">
-                        <h3>{lang === 'en' ? 'Explore our blogs' : 'استكشف مدونتنا'}</h3>
-                        <BlogsCards data={data} lang={lang} />
-                    </div>
+    console.log(data);
 
+    return (
+        <div className="solution-page-cont about-page-cont" style={{ direction: lang == 'ar' ? 'rtl' : 'ltr' }}>
+            {
+                loading ? <Loading /> :
+                    <>
+                        <AboutUs data={data.about} lang={lang} />
+                        <MessVis mission={data.mission}  vision={data.vision} lang={lang} />
+                        <Marq mainTitle={lang === 'en' ? 'Our Partners' : 'شركاءنا'} subTitle={lang === 'en' ? 'One of our success factors' : 'احد اسباب نجاحنا'} data={data.partners} isReverse={true} />
+                        <Touch />
+                    </>
             }
         </div>
     );

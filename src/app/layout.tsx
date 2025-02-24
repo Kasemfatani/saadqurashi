@@ -6,6 +6,8 @@ import Header from '@/components/header/Header';
 import Footer from '@/components/home/Footer';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import '../style/main.css';
+import { Toaster } from "@/components/ui/sonner"
+
 
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -49,6 +51,7 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
+        <Toaster />
       </body>
     </html>
   );

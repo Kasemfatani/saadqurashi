@@ -1,16 +1,24 @@
 'use client'
 import React, { useEffect, useState } from 'react';
-import BlogsCards from './BlogsCards';
 import axios from 'axios';
 import { API_BASE_URL } from '@/lib/apiConfig';
+import { useSearchParams } from 'next/navigation';
+import BlogHead from './BlogHead';
+import BlogContent from './BlogContent';
+import RelatedBlogs from './RelatedBlogs';
 import Loading from '@/app/loading';
 
-export default function Content() {
+export default function Solution() {
 
     let [lang, setLang] = useState('en');
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const [data, setData] = useState([]);
+    const searchParams = useSearchParams()   
+    const blogId = searchParams.get('id');
+
+    console.log(blogId);
+
     useEffect(() => {
         setLoading(true);
         if (typeof window !== 'undefined') {
@@ -20,7 +28,7 @@ export default function Content() {
                 lang: localStorage.getItem('lang'), // Change language dynamically based on state
             };
             // Fetch data from the API with Axios
-            axios.get(`${API_BASE_URL}/landing/home/blogs`
+            axios.get(`${API_BASE_URL}/landing/home/blogs/${blogId}`
                 , {
                     headers: headers,
                 })
@@ -35,15 +43,17 @@ export default function Content() {
                 });
         }
     }, []);
-    return (
-        <div className="blogs" style={{ direction: `ltr` }} id='blogs'>
-            {
-                loading ? <Loading /> : data.length == 0 ? null :
-                    <div className="container m-auto">
-                        <h3>{lang === 'en' ? 'Explore our blogs' : 'استكشف مدونتنا'}</h3>
-                        <BlogsCards data={data} lang={lang} />
-                    </div>
+    console.log(data);
 
+    return (
+        <div className="solution-page-cont" style={{ direction: lang == 'ar' ? 'rtl' : 'ltr' }}>
+            {
+                loading ? <Loading /> :
+                    <>
+                        <BlogHead data={data.blog} lang={lang} />
+                        <BlogContent data={data.blog} lang={lang} />
+                        <RelatedBlogs data={data.other_blogs} lang={lang} />
+                    </>
             }
         </div>
     );

@@ -74,7 +74,7 @@ export default function Hero() {
                                             <h1>{slider.title}</h1>
                                             <p>{slider.description}</p>
                                             <div className="links">
-                                                <Link href="/#services" className='sec-link'>{lang === 'en' ? 'Explore now ' : 'استكشف الان'}</Link>
+                                                <Link href="/#soultions" className='sec-link'>{lang === 'en' ? 'Explore now ' : 'استكشف الان'}</Link>
                                             </div>
                                         </div>
                                     </div>
@@ -91,7 +91,7 @@ export default function Hero() {
                                                 <h1>{data[0].title}</h1>
                                                 <p>{data[0].description}</p>
                                                 <div className="links">
-                                                    <Link href="/#services" className='sec-link'>{lang === 'en' ? 'Explore now ' : 'استكشف الان'}</Link>
+                                                    <Link href="/#soultions" className='sec-link'>{lang === 'en' ? 'Explore now ' : 'استكشف الان'}</Link>
                                                 </div>
                                             </div>
                                         </div>
