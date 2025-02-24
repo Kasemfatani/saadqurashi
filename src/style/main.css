@@ -1994,9 +1994,8 @@ body {
   }
 }
 .book-main-page .book-cont .MazarInfo img {
-  width: 70%;
+  width: 80%;
   height: auto;
-  margin-bottom: 30px;
 }
 .book-main-page .book-cont .MazarInfo h2 {
   color: var(--white-color);
@@ -2098,11 +2097,11 @@ body {
 .book-main-page .book-cont .form .submit {
   padding: 15px 24px;
   border-radius: 5px;
-  background-color: var(--main-color);
+  background-color: var(--sec-color);
   color: var(--white-color);
 }
 .book-main-page .book-cont .form .submit:hover {
-  background-color: var(--sec-color);
+  background-color: var(--main-color);
 }
 .book-main-page .book-cont .form .date-btn {
   text-align: start;

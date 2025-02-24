@@ -72,9 +72,8 @@ body {
             }
 
             img {
-                width: 70%;
+                width: 80%;
                 height: auto;
-                margin-bottom: 30px;
             }
 
             h2 {
@@ -192,12 +191,12 @@ body {
             .submit {
                 padding: 15px 24px;
                 border-radius: 5px;
-                background-color: $main;
+                background-color: $sec;
                 color: $white;
             }
 
             .submit:hover {
-                background-color: $sec;
+                background-color: $main;
             }
 
             .date-btn {
