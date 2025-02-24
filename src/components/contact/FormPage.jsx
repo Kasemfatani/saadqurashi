@@ -16,16 +16,17 @@ import { Textarea } from '../ui/textarea';
 import { API_BASE_URL } from '@/lib/apiConfig';
 import { toast } from "sonner"
 export default function FormPage({ lang }) {
+    const router = useRouter();
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(false);
     const sendPostRequest = async (data) => {
-        const url = `${API_BASE_URL}/contact`;
+        const url = `${API_BASE_URL}/landing/contact-us`;
         console.log(data);
         const queryParams = {
             customer_name: data?.name,
             customer_mobile: data?.phone,
             customer_email: data?.email,
-            service_id: data.service,
+            company_name: data.company,
             message: data.comments,
         };
         return axios({
@@ -48,6 +49,7 @@ export default function FormPage({ lang }) {
                 });
                 // Redirect or perform additional actions
                 form.reset(); // Reset form fields
+                router.push('/');
             } else {
                 // Handle unexpected responses
                 toast(errorMessage, {
@@ -63,7 +65,6 @@ export default function FormPage({ lang }) {
 
     const formSchema = z
         .object({
-
             name: z.string().min(1, { message: "Name is required" }).max(50, { message: "Name must be at most 50 characters" }),
             company: z.string().min(1, { message: "Company name is required" }).max(100, { message: "Name must be at most 50 characters" }),
             phone: z.string().refine(validator.isMobilePhone, { message: "Invalid phone number" }),
@@ -83,8 +84,7 @@ export default function FormPage({ lang }) {
         },
     });
     const Submit = (data) => {
-        console.log(data);
-        // sendPostRequest(data);
+        sendPostRequest(data);
 
     };
     return (
