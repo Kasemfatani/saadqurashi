@@ -231,7 +231,7 @@ export default function FormPage({ lang }) {
                                         <Textarea
                                             type="textarea"
                                             {...field}
-                                            placeholder={"اخبرنا اكثر عن شركتك ونوع الخدمه "}
+                                            placeholder={lang === "en" ? "Tell us more about your company and the type of service" : "اخبرنا اكثر عن شركتك ونوع الخدمه "}
                                             className=""
                                         />
                                     </FormControl>
