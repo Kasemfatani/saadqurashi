@@ -60,10 +60,10 @@ export default function Solutions() {
                                 modules={[Autoplay, Navigation, Pagination]}
                                 breakpoints={{
                                     1400: {
-                                        slidesPerView: 4,
+                                        slidesPerView: 3,
                                     },
                                     1100: {
-                                        slidesPerView: 4,
+                                        slidesPerView: 3,
                                     },
                                     767: {
                                         slidesPerView: 2.5,

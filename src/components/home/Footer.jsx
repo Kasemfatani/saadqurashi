@@ -4,7 +4,6 @@ import c from '/public/c.svg'
 import Link from 'next/link';
 import Image from 'next/image';
 import logo from '/public/footerlogo.svg'
-import { usePathname } from 'next/navigation';
 import axios from 'axios';
 import { API_BASE_URL } from '@/lib/apiConfig';
 
