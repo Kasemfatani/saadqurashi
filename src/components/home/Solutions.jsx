@@ -43,7 +43,7 @@ export default function Solutions() {
         }
     }, []);
     return (
-        <div className="blogs" style={{ direction: `ltr` }} id='blogs'>
+        <div className="blogs" style={{ direction: `ltr` }} id='soultions'>
             {
                 loading ? <Loading /> :
                     <div className="container m-auto">
