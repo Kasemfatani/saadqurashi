@@ -19,7 +19,7 @@ export default function Touch() { // Defining the main functional component name
 
 
     return (
-        <div className="ready-cont" style={{ backgroundImage: `url(${img1.src})` }}>
+        <div className="ready-cont" style={{ backgroundImage: `url(${img1.src})` ,direction: `${lang === 'en' ? 'ltr' : 'rtl'}`}}>
             <div className="ready ">
                 <div className="container">
                     <h2>{lang === 'en' ? 'Get in touch with us  ' : 'كن علي تواصل معنا'} </h2>
