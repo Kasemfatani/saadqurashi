@@ -1,15 +1,9 @@
 import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import Link from 'next/link';
-import Loading from '@/app/loading';
-
 
 export default function MessVis({ mission, vision, lang }) {
-
-
     return (
-
         <div className="messVis" style={{ direction: lang == "en" ? 'ltr' : 'rtl' }} id='messVis'>
             <div className="container m-auto">
                 <div className="miss-vis-cont">
