@@ -23,7 +23,7 @@ export default function Header() {
     }
   }, [lang]);
   return (
-    <header className={`${lang === 'en' ? 'ltr' : 'rtl'} header`} >
+    <header className={` header`} style={{ direction: lang === 'ar' ? 'rtl' : 'ltr' }} >
       <div className="container m-auto flex items-center gap-2 justify-between">
         <Link href="/"> <Image src={logo} alt="logo" className="logo-img" /></Link>
         <div className="links">
