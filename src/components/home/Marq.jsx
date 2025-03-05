@@ -1,11 +1,14 @@
 'use client'
-import React , { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Marquee from '../ui/marquee';
 import { cn } from '@/lib/utils';
+import { ShineBorder } from '../magicui/shine-border';
 
-export default function Marq({mainTitle , subTitle , data ,isReverse}) { // Defining the main functional component named 'Footer'.
+export default function Marq({ mainTitle, subTitle, data, isReverse }) { // Defining the main functional component named 'Footer'.
     let [lang, setLang] = useState('en');
+    console.log(data);
+
     useEffect(() => {
         if (typeof window !== 'undefined') {
             if (localStorage.getItem('lang') === 'ar' || localStorage.getItem('lang') === 'en') {
@@ -36,13 +39,15 @@ export default function Marq({mainTitle , subTitle , data ,isReverse}) { // Defi
                 <h4>{subTitle}</h4>
             </div>
             <div className="marq" style={{ direction: 'ltr' }}>
-                <div className="relative flex  w-full flex-col items-center gap-4 justify-center overflow-hidden  ">
-                    <Marquee pauseOnHover reverse={isReverse} className="[--duration:20s]">
-                        {data.map((review, index) => (
-                            <ReviewCard key={index} {...review} />
-                        ))}
-                    </Marquee>
-                </div>
+
+                {data.map((review, index) => (
+                    <ShineBorder borderWidth={3} className="relative rounded-2xl p-0 h-full  min-h-0 min-w-0" color={[ "#54C8E8", "#185A7D"]}>
+                        <div className="part-cont" >
+                            <Image src={review.image} alt="Mazar" width={200} height={200} />
+                        </div>
+                    </ShineBorder>
+                ))}
+
             </div>
         </section>
     )

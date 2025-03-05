@@ -1338,11 +1338,18 @@ footer .served {
     padding: 56px 0;
   }
 }
+.countries-section .marq {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 .countries-section .marq .part-cont {
-  width: 180px;
-  height: 180px;
+  width: 160px;
+  height: 160px;
   overflow: hidden;
-  border-radius: 20px;
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;

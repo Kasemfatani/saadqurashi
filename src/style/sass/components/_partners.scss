@@ -26,11 +26,16 @@
     }
 
     .marq {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        justify-content: center;
+        flex-wrap: wrap;
         .part-cont {
-            width: 180px;
-            height: 180px;
+            width: 160px;
+            height: 160px;
             overflow: hidden;
-            border-radius: 20px;
+            border-radius: 10px;
             display: flex;
             align-items: center;
             justify-content: center;
