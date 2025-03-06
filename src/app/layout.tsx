@@ -9,8 +9,6 @@ import '../style/main.css';
 import { Toaster } from "@/components/ui/sonner"
 import logo from '/public/footerlogo.svg'
 
-
-
 export async function generateMetadata(): Promise<Metadata> {
   const lang = typeof window !== 'undefined' && localStorage.getItem('lang') === 'ar' ? 'ar' : 'en';
   return {
@@ -24,7 +22,7 @@ export async function generateMetadata(): Promise<Metadata> {
       siteName: "Masira",
       images: [
         {
-          url: logo.src,
+          url: 'https://www.i-masira.com/_next/static/media/footerlogo.95c1f4e6.svg',
           width: 1200,
           height: 630,
           alt: 'i-Masira',
