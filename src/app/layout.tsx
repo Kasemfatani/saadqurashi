@@ -7,30 +7,31 @@ import Footer from '@/components/home/Footer';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import '../style/main.css';
 import { Toaster } from "@/components/ui/sonner"
+import logo from '/public/footerlogo.svg'
 
 
 
 export async function generateMetadata(): Promise<Metadata> {
   const lang = typeof window !== 'undefined' && localStorage.getItem('lang') === 'ar' ? 'ar' : 'en';
   return {
-    title: lang === 'ar' ? 'مسيره' : 'Masira',
-    keywords: "masira",
-    description: "masira",
+    title: lang === 'ar' ? 'مسيره' : 'i-Masira',
+    keywords: "i-Masira",
+    description: "i-Masira",
     openGraph: {
-      title: "Masira",
-      description: 'masira',
-      url: 'https://www.mzarapp.com',
+      title: "i-Masira",
+      description: 'i-Masira',
+      url: 'https://i-masira.com/',
       siteName: "Masira",
-      // images: [
-      //   {
-      //     url: mzarImg.src,
-      //     width: 1200,
-      //     height: 630,
-      //     alt: lang === 'ar' ? 'مزار - واجهة ومسار' : 'Mzar - A destination and path',
-      //   },
-      // ],
+      images: [
+        {
+          url: logo.src,
+          width: 1200,
+          height: 630,
+          alt: 'i-Masira',
+        },
+      ],
       type: 'website',
-      locale: lang === 'ar' ? 'ar_EG' : 'en_US',
+      locale: lang === 'ar' ? 'ar_SA' : 'en_US',
     },
   };
 }
