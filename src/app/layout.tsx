@@ -22,7 +22,7 @@ export async function generateMetadata(): Promise<Metadata> {
       siteName: "Masira",
       images: [
         {
-          url: 'https://www.i-masira.com/_next/static/media/footerlogo.95c1f4e6.svg',
+          url: logo.src,
           width: 1200,
           height: 630,
           alt: 'i-Masira',
