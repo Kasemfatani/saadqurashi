@@ -92,7 +92,7 @@ export default function Solutions() {
                                                 <Image src={path.icon} alt="Mazar" width={200} height={200} />
                                                 <h4>{path.name}</h4>
                                                 <p>{path.short_description}</p>
-                                                <Link href={`/solution?id=${path.id}`} className='main-link-sec'><span>{lang === 'en' ? 'Know more' : 'اعرف المزيد'}</span> <i className={`fa-solid fa-chevron-${lang === 'en' ? "right" : "left"}`}></i></Link>
+                                                {/* <Link href={`/solution?id=${path.id}`} className='main-link-sec'><span>{lang === 'en' ? 'Know more' : 'اعرف المزيد'}</span> <i className={`fa-solid fa-chevron-${lang === 'en' ? "right" : "left"}`}></i></Link> */}
                                             </div>
                                         </ShineBorder>
                                     </SwiperSlide>
