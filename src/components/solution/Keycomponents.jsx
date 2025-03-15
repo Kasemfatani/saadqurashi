@@ -24,7 +24,8 @@ export default function Keycomponents({ data, lang }) {
                                 // pagination={{ type: "bullets", clickable: true }}
                                 spaceBetween={24}
                                 slidesPerView={7.5}
-                                autoplay={false}
+                                autoplay={true}
+                                speed={1000}
                                 dir={lang === 'ar' ? 'rtl' : 'ltr'}
                                 loop={true}
                                 modules={[Autoplay, Navigation, Pagination]}

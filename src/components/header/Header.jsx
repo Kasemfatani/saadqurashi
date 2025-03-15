@@ -29,7 +29,7 @@ export default function Header() {
         <Link href="/"> <Image src={logo} alt="logo" className="logo-img" /></Link>
         <div className="links">
           <Link href="/about" className={pathname === '/#about' ? 'active' : 'normal-Link'}>{lang === 'en' ? 'About Us' : 'من نحن'}</Link>
-          <Link href="/#soultions" className={pathname === '/#soultions' ? 'active' : 'normal-Link'}>{lang === 'en' ? 'Solutions' : 'الخدمات'}</Link>
+          <Link href="/#soultions" className={pathname === '/#soultions' ? 'active' : 'normal-Link'}>{lang === 'en' ? 'Solutions' : 'الحلول'}</Link>
           <Link href="/#blogs" className={pathname === '/#about' ? 'active' : 'normal-Link'}>{lang === 'en' ? 'Blogs' : 'المقالات'}</Link>
           {
             pathname === '/' ?
@@ -73,7 +73,7 @@ export default function Header() {
           <div className="links">
             <Link href="/" className={pathname === '/' ? 'active' : 'normal-Link'}>{lang === 'en' ? 'Home' : 'الرئيسية'}</Link>
             <Link href="/about" className={pathname === '/#about' ? 'active' : 'normal-Link'}>{lang === 'en' ? 'About' : 'من نحن'}</Link>
-            <Link href="/#soultions " className={pathname === '/#soultions ' ? 'active' : 'normal-Link'}>{lang === 'en' ? 'Solutions' : 'الخدمات'}</Link>
+            <Link href="/#soultions " className={pathname === '/#soultions ' ? 'active' : 'normal-Link'}>{lang === 'en' ? 'Solutions' : 'الحلول'}</Link>
             <Link href="/#blogs" className={pathname === '/#about' ? 'active' : 'normal-Link'}>{lang === 'en' ? 'Blogs' : 'المقالات'}</Link>
             <Link href="/contact" className='book-link' >{lang === 'en' ? 'Contact us' : 'اتصل بنا'}</Link>
             <div

@@ -48,7 +48,7 @@ export default function CaseStudies() {
                 loading ? <Loading /> :
                     <div className="case-studies" >
                         <div className="container m-auto">
-                            <h2>{lang === 'en' ? 'How we achieve success with them?' : 'كيف نحقق النجاح معهم'}</h2>
+                            <h2>{lang === 'en' ? 'Driving Digital Transformation for Leading Industries' : 'تحقيق التحول الرقمي للمصانع الرائدة'}</h2>
                             <h3>{lang === 'en' ? 'Take a  look to our case studies ' : 'استكشف حالاتنا '}</h3>
                             <Swiper
                                 navigation

@@ -50,8 +50,8 @@ export default function Partners() { // Defining the main functional component n
             {
                 loading ? <Loading /> :
                     <>
-                        <Marq mainTitle={lang === 'en' ? 'Our Partners' : 'شركاءنا'} subTitle={lang === 'en' ? 'One of our success factors' : 'احد اسباب نجاحنا'} data={data.partners} isReverse={true} />
-                        <Marq mainTitle={lang === 'en' ? 'Our clients' : 'عملائنا'} subTitle={lang === 'en' ? 'We navigate them to the future ' : 'نقوم بتوجيههم إلى المستقبل'} data={data.clients} isReverse={false} />
+                        <Marq mainTitle={lang === 'en' ? 'Our Partners' : 'شركاءنا'} subTitle={lang === 'en' ? 'Powering innovation with industry-leading partnerships.' : 'تعزيز الابتكار من خلال شراكات رائدة في القطاع الصناعي.'} data={data.partners} isReverse={true} />
+                        <Marq mainTitle={lang === 'en' ? 'Our clients' : 'عملائنا'} subTitle={lang === 'en' ? 'Trusted by top manufacturers for smart industrial solutions.' : 'موثوق بنا من قبل أكبر المصانع لحلول صناعية ذكية.'} data={data.clients} isReverse={false} />
                     </>
             }
         </>

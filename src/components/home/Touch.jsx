@@ -30,8 +30,8 @@ export default function Touch() { // Defining the main functional component name
             </div>
             <div className="ready ">
                 <div className="container m-auto">
-                    <h2>{lang === 'en' ? 'Get in touch with us  ' : 'كن علي تواصل معنا'} </h2>
-                    <p>{lang === 'en' ? 'Have any questions or need assistance? Reach out to us, and our team will be happy to help.' : 'هل لديك أسئلة أو مساعدة ؟ اتصل بنا وصاحبنا سأعمل للمساعدة .'}</p>
+                    <h2>{lang === 'en' ? 'Get in touch with us  ' : 'كن على تواصل معنا'} </h2>
+                    <p>{lang === 'en' ? 'Have any questions or need assistance? Reach out to us, and our team will be happy to help.' :'هل لديك أي أسئلة أو تحتاج إلى مساعدة؟ تواصل معنا، وسيسعد فريقنا بمساعدتك.'}</p>
                     <Link href={`/contact`} className='main-link-sec'><span>{lang === 'en' ? 'Contact us' : 'اتصل بنا'}</span> <i className={`fa-solid fa-chevron-${lang === 'en' ? "right" : "left"}`}></i></Link>
                 </div>
             </div>
