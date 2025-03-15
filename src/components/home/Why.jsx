@@ -54,9 +54,9 @@ export default function Why() {
                                     data.map((item, index) =>
                                         <div className="grid-item" key={index}>
                                             <motion.div
-                                                initial={{ opacity: 0 }}
-                                                animate={{ opacity: 1 }}
-                                                transition={{ duration: 0.5 }}
+                                                initial={{ opacity: 0, scale: 0 }}
+                                                animate={{ opacity: 1, scale: 1 }}
+                                                transition={{ duration: 1.5 }}
                                             >
                                                 <Image src={item.icon} alt="" width={200} height={200} />
                                             </motion.div>

@@ -39,7 +39,7 @@ export default function Marq({ mainTitle, subTitle, data, isReverse }) { // Defi
             </div>
             <div className="marq" style={{ direction: 'ltr' }}>
 
-                {data.map((review, index) => (
+                {data?.map((review, index) => (
                     <ShineBorder borderWidth={3} className="relative rounded-2xl p-0 h-full  min-h-0 min-w-0" color={[ "#54C8E8", "#185A7D"]}>
                         <div className="part-cont" >
                             <Image src={review.image} alt="Mazar" width={200} height={200} />

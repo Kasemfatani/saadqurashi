@@ -1123,7 +1123,7 @@ footer .served {
 .why {
   margin: 0;
   padding: 66px 0;
-  background-color: #648AA2;
+  background-color: var(--main-hover);
 }
 .why .hero {
   margin-bottom: 96px;
@@ -1448,6 +1448,12 @@ footer .served {
     width: 180px;
     height: 180px;
   }
+}
+.countries-section .marq .part-cont:hover {
+  background-color: rgba(158, 218, 255, 0.6);
+}
+.countries-section .marq .part-cont:hover img {
+  transform: scale(1.1);
 }
 .countries-section .marq .part-cont img {
   width: 80%;
@@ -2554,6 +2560,9 @@ body {
   -o-object-fit: cover;
   object-fit: cover;
 }
+.case-studies .study-cont .img-cont img:hover {
+  transform: scale(1.1);
+}
 .case-studies .study-cont h4 {
   font-size: 24px;
   font-weight: 600;
@@ -2575,4 +2584,23 @@ body {
   .case-studies .study-cont p {
     font-size: 14px;
   }
+}
+.case-studies .study-cont a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--main-hover);
+}
+.case-studies .study-cont a:hover {
+  color: var(--main-color);
+}
+@media screen and (max-width: 767px) {
+  .case-studies .study-cont a {
+    font-size: 14px;
+  }
+}
+.case-studies .study-cont a i {
+  font-size: 12px;
 }/*# sourceMappingURL=main.css.map */

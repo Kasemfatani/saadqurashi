@@ -45,7 +45,12 @@
                 width: 180px;
                 height: 180px;
             }
-
+            &:hover {
+                background-color: rgba(158, 218, 255, 0.6);
+                img{
+                    transform: scale(1.1);
+                }
+            }
             img {
                 width: 80%;
                 height: auto;

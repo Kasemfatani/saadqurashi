@@ -11,6 +11,7 @@ import Loading from '@/app/loading';
 import parse from 'html-react-parser';
 import { API_BASE_URL } from '@/lib/apiConfig';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 export default function CaseStudies() {
     let [lang, setLang] = useState('en');
@@ -88,12 +89,18 @@ export default function CaseStudies() {
                                 {data?.map((ele) =>
                                     <SwiperSlide key={ele.id}>
                                         <div className="study-cont">
-                                            <div className="img-cont">
+                                            <motion.div
+                                                initial={{ opacity: 0, scale: 1.5 }}
+                                                whileInView={{ opacity: 1, scale: 1 }}
+                                                viewport={{ once: true }}
+                                                transition={{ duration: .5 }}
+
+                                            className="img-cont">
                                                 <Image src={ele.image} alt="" width={100} height={100} />
-                                            </div>
+                                            </motion.div>
                                             <h4>{ele.name}</h4>
                                             <p>{parse(ele.short_description)}</p>
-                                            <Link href={`/case-study?id=${ele.id}`} >Read more</Link>
+                                            <Link href={`/case-study?id=${ele.id}`} ><span>Read more</span> {lang === 'en' ? <i className="fa-solid fa-chevron-right"></i> : <i className="fa-solid fa-chevron-left"></i>}</Link>
                                         </div>
                                     </SwiperSlide>
                                 )}
