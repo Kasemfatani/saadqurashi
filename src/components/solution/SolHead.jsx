@@ -11,7 +11,7 @@ import solImage from '/public/ters.svg'
 
 export default function SolHead({ data, lang }) {
     return (
-        <div className="sol-header" style={{ backgroundImage: `url(${data.image})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+        <div className="sol-header" style={{ backgroundImage: `url(${data.image})`, backgroundSize: 'cover', backgroundPosition: 'center', direction: `${lang === 'en' ? 'ltr' : 'rtl'}` }}>
             <div className="overlay">
                 <Image src={solImage} alt="Mazar" className='abs-img' width={200} height={200} />
                 <div className="container m-auto">

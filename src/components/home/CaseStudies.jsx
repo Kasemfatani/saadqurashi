@@ -48,8 +48,8 @@ export default function CaseStudies() {
                 loading ? <Loading /> :
                     <div className="case-studies" >
                         <div className="container m-auto">
-                            <h2>How we achieve success with them?</h2>
-                            <h3>Take a  look to our case studies </h3>
+                            <h2>{lang === 'en' ? 'How we achieve success with them?' : 'كيف نحقق النجاح معهم'}</h2>
+                            <h3>{lang === 'en' ? 'Take a  look to our case studies ' : 'استكشف حالاتنا '}</h3>
                             <Swiper
                                 navigation
                                 // pagination={{ type: "bullets", clickable: true }}
@@ -100,7 +100,7 @@ export default function CaseStudies() {
                                             </motion.div>
                                             <h4>{ele.name}</h4>
                                             <p>{parse(ele.short_description)}</p>
-                                            <Link href={`/case-study?id=${ele.id}`} ><span>Read more</span> {lang === 'en' ? <i className="fa-solid fa-chevron-right"></i> : <i className="fa-solid fa-chevron-left"></i>}</Link>
+                                            <Link href={`/case-study?id=${ele.id}`} ><span>{lang === 'en' ? 'Read more' : 'قراءة المزيد'}</span> {lang === 'en' ? <i className="fa-solid fa-chevron-right"></i> : <i className="fa-solid fa-chevron-left"></i>}</Link>
                                         </div>
                                     </SwiperSlide>
                                 )}

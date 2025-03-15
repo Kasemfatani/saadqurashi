@@ -14,8 +14,8 @@ export default function Header() {
   useEffect(() => {
     if (typeof window !== 'undefined') {
       if (localStorage.getItem('lang') === 'ar' || localStorage.getItem('lang') === 'en') {
-        // setLang(localStorage.getItem('lang'));
-        setLang('en');
+        setLang(localStorage.getItem('lang'));
+        // setLang('en');
       }
       else {
         localStorage.setItem('lang', 'en');
@@ -37,7 +37,7 @@ export default function Header() {
               : null
           }
 
-          {/* <div
+          <div
             className="lang-btn"
             onClick={() => {
               if (lang === 'en') {
@@ -51,7 +51,7 @@ export default function Header() {
             }}
           >
             <Globe size={20} />
-          </div> */}
+          </div>
 
         </div>
 
@@ -76,7 +76,7 @@ export default function Header() {
             <Link href="/#soultions " className={pathname === '/#soultions ' ? 'active' : 'normal-Link'}>{lang === 'en' ? 'Solutions' : 'الخدمات'}</Link>
             <Link href="/#blogs" className={pathname === '/#about' ? 'active' : 'normal-Link'}>{lang === 'en' ? 'Blogs' : 'المقالات'}</Link>
             <Link href="/contact" className='book-link' >{lang === 'en' ? 'Contact us' : 'اتصل بنا'}</Link>
-            {/* <div
+            <div
               className="lang-btn"
               onClick={() => {
                 if (lang === 'en') {
@@ -90,7 +90,7 @@ export default function Header() {
               }}
             >
               <Globe size={20} />
-            </div> */}
+            </div>
           </div>
         </div>
       </div>

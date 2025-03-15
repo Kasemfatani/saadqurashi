@@ -10,12 +10,12 @@ export default function CaseCont({ data, lang }) {
                 <div className="text">
                     <h2>{data.customer_name}</h2>
                     <h3>{data.intro_title}</h3>
-                    <h4>Executive Summary </h4>
+                    <h4>{lang === 'en' ? 'Executive Summary' : 'الملخص التنفيذي'}</h4>
                     <p>{parse(data.exective_summary)}</p>
-                    <h4 className='objective-heading'>Objective:</h4>
+                    <h4 className='objective-heading'>{lang === 'en' ? 'Objective:' : 'الهدف'}</h4>
                     <p>{parse(data.objective)}</p>
                     <Image src={data.objective_image} alt="i-masera" className='abs-img' width={200} height={200} />
-                    <h4 className='objective-heading'>Key Features: </h4>
+                    <h4 className='objective-heading'>{lang === 'en' ? 'Features:' : 'الميزات'}</h4>
                     <div className="features">
                         {
                             data.features.map((item, index) => 
@@ -24,13 +24,12 @@ export default function CaseCont({ data, lang }) {
                                 </div>
                         )}
                     </div>
-                    <h4>Functional & Technical Deliverables </h4>
+                    <h4>{lang === 'en' ? 'Functional & Technical Deliverables:' : 'التسليمات الفنية والتنفيذية' }</h4>
                     <p>{parse(data.technical)}</p>
-                    <h4>Results & Impact </h4>
+                    <h4>{lang === 'en' ? 'Results & Impact' : 'النتائج والتأثير' }</h4>
                     <p>{parse(data.impact)}</p>
-                    <h4>Conclusion </h4>
+                    <h4>{lang === 'en' ? 'Conclusion' : 'الملخص' }</h4>
                     <p>{parse(data.conclusion)}</p>
-                    
                 </div>
             </div>
         </div>
