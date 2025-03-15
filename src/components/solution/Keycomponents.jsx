@@ -18,7 +18,7 @@ export default function Keycomponents({ data, lang }) {
                 components.length > 0 ?
                     <div className="key-compo-cont">
                         <div className="container m-auto">
-                            <h3>{lang == 'en' ? "Key components of system " : "المكونات الرئيسية للنظام"}</h3>
+                            <h3>{lang == 'en' ? "Key Benefits of system " : "مميزات للنظام"}</h3>
                             <Swiper
                                 // navigation
                                 // pagination={{ type: "bullets", clickable: true }}
