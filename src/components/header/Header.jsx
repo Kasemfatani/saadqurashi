@@ -15,7 +15,6 @@ export default function Header() {
     if (typeof window !== 'undefined') {
       if (localStorage.getItem('lang') === 'ar' || localStorage.getItem('lang') === 'en') {
         setLang(localStorage.getItem('lang'));
-        // setLang('en');
       }
       else {
         localStorage.setItem('lang', 'en');
@@ -36,7 +35,6 @@ export default function Header() {
               <Link href="/contact" className='book-link' >{lang === 'en' ? 'Contact us' : 'اتصل بنا'}</Link>
               : null
           }
-
           <div
             className="lang-btn"
             onClick={() => {
@@ -52,7 +50,6 @@ export default function Header() {
           >
             <Globe size={20} />
           </div>
-
         </div>
 
         <Menu className='menu-bars' onClick={() => {
