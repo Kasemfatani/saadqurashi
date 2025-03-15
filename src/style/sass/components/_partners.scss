@@ -3,7 +3,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-
+    background-color: #F6F7F6;
     h3 {
         color: #185A7D;
         font-size: 32px;
@@ -61,15 +61,32 @@
     background-size: cover;
     background-position: center;
     overflow: hidden;
-
+    position: relative;
+    .svit{
+        height: 370px;
+        position: absolute;
+        top: 0%;
+        left: -10%;
+        z-index: 3;
+        img{
+            height: 100%;
+            width: 100%;
+        }
+    }
+    .svit-r{
+        right: -10%;
+        left: unset;
+        transform: rotate(180deg);
+    }
 
     .ready {
-        display: flex;
         padding: 56px 0px;
-        align-items: center;
-        flex-direction: column;
-        background-color: rgba(100, 138, 162, .8);
-
+        background-color: rgba(0, 38, 62, .95);
+        .container {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
         h2 {
             font-size: 32px;
             font-weight: 700;
@@ -84,6 +101,12 @@
             margin-bottom: 24px;
         }
 
+        a {
+            color: $sec;
+            border-radius: 5px;
+            background-color: $white;
+            width: fit-content;
+        }
         a:hover {
             background-color: $main;
             color: $white;

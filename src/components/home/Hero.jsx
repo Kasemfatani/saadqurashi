@@ -41,55 +41,40 @@ export default function Hero() {
 
 
     return (
-        <div className="hero">
+        <>
+
             {
                 loading ? <Loading /> :
-                    <Swiper
-                        // navigation
-                        // pagination={{ type: "bullets", clickable: true }}
-                        spaceBetween={24}
-                        slidesPerView={7.5}
-                        autoplay={true}
-                        dir={lang === 'ar' ? 'rtl' : 'ltr'}
-                        loop={true}
-                        modules={[Autoplay, Navigation, Pagination]}
-                        breakpoints={{
-                            1400: {
-                                slidesPerView: 1,
-                            },
-                            100: {
-                                slidesPerView: 1,
-                                autoplay: false,
-                                spaceBetween: 16
+                    <div className="hero">
+                        <Swiper
+                            // navigation
+                            // pagination={{ type: "bullets", clickable: true }}
+                            spaceBetween={24}
+                            slidesPerView={7.5}
+                            autoplay={true}
+                            dir={lang === 'ar' ? 'rtl' : 'ltr'}
+                            loop={true}
+                            modules={[Autoplay, Navigation, Pagination]}
+                            breakpoints={{
+                                1400: {
+                                    slidesPerView: 1,
+                                },
+                                100: {
+                                    slidesPerView: 1,
+                                    autoplay: false,
+                                    spaceBetween: 16
 
-                            }
-                        }}
-                    >
-                        {data?.map((slider, index) =>
-                            <SwiperSlide key={index}>
-                                <div className="hero">
-                                    <Image src={slider.image} alt="logo" className="hero-img image-bg" width={1000} height={1000} />
-                                    <div className="overlay">
-                                        <div className="heading">
-                                            <h1>{slider.title}</h1>
-                                            <p>{slider.description}</p>
-                                            <div className="links">
-                                                <Link href="/#soultions" className='sec-link'>{lang === 'en' ? 'Explore now ' : 'استكشف الان'}</Link>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </SwiperSlide>
-                        )}
-                        {
-                            data.length === 1 ?
-                                <SwiperSlide>
+                                }
+                            }}
+                        >
+                            {data?.map((slider, index) =>
+                                <SwiperSlide key={index}>
                                     <div className="hero">
-                                        <Image src={data[0].image} alt="logo" className="hero-img image-bg" width={1000} height={1000} />
+                                        <Image src={slider.image} alt="logo" className="hero-img image-bg" width={1000} height={1000} />
                                         <div className="overlay">
                                             <div className="heading">
-                                                <h1>{data[0].title}</h1>
-                                                <p>{data[0].description}</p>
+                                                <h1>{slider.title}</h1>
+                                                <p>{slider.description}</p>
                                                 <div className="links">
                                                     <Link href="/#soultions" className='sec-link'>{lang === 'en' ? 'Explore now ' : 'استكشف الان'}</Link>
                                                 </div>
@@ -97,10 +82,28 @@ export default function Hero() {
                                         </div>
                                     </div>
                                 </SwiperSlide>
-                                :null
-                        }
-                    </Swiper>
+                            )}
+                            {
+                                data.length === 1 ?
+                                    <SwiperSlide>
+                                        <div className="hero">
+                                            <Image src={data[0].image} alt="logo" className="hero-img image-bg" width={1000} height={1000} />
+                                            <div className="overlay">
+                                                <div className="heading">
+                                                    <h1>{data[0].title}</h1>
+                                                    <p>{data[0].description}</p>
+                                                    <div className="links">
+                                                        <Link href="/#soultions" className='sec-link'>{lang === 'en' ? 'Explore now ' : 'استكشف الان'}</Link>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </SwiperSlide>
+                                    : null
+                            }
+                        </Swiper>
+                    </div>
             }
-        </div>
+        </>
     );
 }

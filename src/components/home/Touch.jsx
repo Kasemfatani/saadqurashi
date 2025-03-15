@@ -2,6 +2,8 @@
 import React, { useEffect, useState } from 'react';
 import img1 from '/public/kae.jpeg'
 import Link from 'next/link';
+import Image from 'next/image'; 
+import swivt from '/public/touch-swivt.svg';
 
 export default function Touch() { // Defining the main functional component named 'Footer'.
     let [lang, setLang] = useState('en');
@@ -20,14 +22,19 @@ export default function Touch() { // Defining the main functional component name
 
     return (
         <div className="ready-cont" style={{ backgroundImage: `url(${img1.src})` ,direction: `${lang === 'en' ? 'ltr' : 'rtl'}`}}>
+            <div className="svit-r svit">
+                <Image src={swivt} alt="Mazar" width={200} height={200} />
+            </div>
+            <div className="svit-l svit">
+                <Image src={swivt} alt="Mazar" width={200} height={200} />
+            </div>
             <div className="ready ">
-                <div className="container">
+                <div className="container m-auto">
                     <h2>{lang === 'en' ? 'Get in touch with us  ' : 'كن علي تواصل معنا'} </h2>
                     <p>{lang === 'en' ? 'Have any questions or need assistance? Reach out to us, and our team will be happy to help.' : 'هل لديك أسئلة أو مساعدة ؟ اتصل بنا وصاحبنا سأعمل للمساعدة .'}</p>
                     <Link href={`/contact`} className='main-link-sec'><span>{lang === 'en' ? 'Contact us' : 'اتصل بنا'}</span> <i className={`fa-solid fa-chevron-${lang === 'en' ? "right" : "left"}`}></i></Link>
                 </div>
             </div>
-            
         </div>
     )
 }

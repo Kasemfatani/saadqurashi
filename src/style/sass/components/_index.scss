@@ -1,0 +1,78 @@
+.why-masira{
+    padding: 56px 0;
+    background-color: #F6F7F6;
+    h2{
+        font-size: 32px;
+        font-weight: 700;
+        color: $hover;
+        margin-bottom: 11px;
+        text-align: center;
+        @media screen and (max-width: 767px) {
+            font-size: 24px;
+            
+        }
+    }
+    h3{
+        font-size: 24px;
+        font-weight: 600;
+        color: #3C7B9C;
+        text-align: center;
+        margin-bottom: 34px;
+        @media screen and (max-width: 767px) {
+            font-size: 20px;
+            margin-bottom: 24px;
+            
+        }
+    }
+    .grid-cont{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 24px;
+        @media screen and (max-width: 991px) {
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+        @media screen and (max-width: 767px) {
+            grid-template-columns: 1fr;
+            gap: 24px;
+        }
+        .grid-item{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        img{
+            width: 80px;
+            height: 80px;
+            margin-bottom: 16px;
+            @media screen and (max-width: 767px) {
+                width: 60px;
+                height: 60px;
+                
+            }
+        }
+        h4{
+            font-size: 24px;
+            font-weight: 700;
+            color: $hover;
+            margin-bottom: 8px;
+            text-align: center;
+            @media screen and (max-width: 767px) {
+                font-size: 20px;
+                
+            }
+        }
+        p{
+            font-size: 16px;
+            font-weight: 400;
+            color: #3A3A43;
+            text-align: center;
+
+            @media screen and (max-width: 767px) {
+                font-size: 14px;
+                
+            }
+        }
+    }
+}

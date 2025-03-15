@@ -13,57 +13,63 @@ import solImage from '/public/ters.svg'
 export default function Keycomponents({ data, lang }) {
     const components = data.components
     return (
-        <div className="key-compo-cont">
-            <div className="container m-auto">
-                <h3>{lang == 'en' ? "Key components of system " : "المكونات الرئيسية للنظام"}</h3>
-                <Swiper
-                    // navigation
-                    // pagination={{ type: "bullets", clickable: true }}
-                    spaceBetween={24}
-                    slidesPerView={7.5}
-                    autoplay={false}
-                    dir={lang === 'ar' ? 'rtl' : 'ltr'}
-                    loop={true}
-                    modules={[Autoplay, Navigation, Pagination]}
-                    breakpoints={{
-                        1400: {
-                            slidesPerView: 3,
-                        },
-                        1100: {
-                            slidesPerView: 3,
-                        },
-                        767: {
-                            slidesPerView: 2.5,
-                        },
-                        768: {
-                            slidesPerView: 2.5,
-                            autoplay: false,
-                        },
-                        640: {
-                            slidesPerView: 2.1,
-                            autoplay: false,
-                            spaceBetween: 16
-                        },
-                        100: {
-                            slidesPerView: 1.1,
-                            autoplay: false,
-                            spaceBetween: 16
+        <>
+            {
+                components.length > 0 ?
+                    <div className="key-compo-cont">
+                        <div className="container m-auto">
+                            <h3>{lang == 'en' ? "Key components of system " : "المكونات الرئيسية للنظام"}</h3>
+                            <Swiper
+                                // navigation
+                                // pagination={{ type: "bullets", clickable: true }}
+                                spaceBetween={24}
+                                slidesPerView={7.5}
+                                autoplay={false}
+                                dir={lang === 'ar' ? 'rtl' : 'ltr'}
+                                loop={true}
+                                modules={[Autoplay, Navigation, Pagination]}
+                                breakpoints={{
+                                    1400: {
+                                        slidesPerView: 3,
+                                    },
+                                    1100: {
+                                        slidesPerView: 3,
+                                    },
+                                    767: {
+                                        slidesPerView: 2.5,
+                                    },
+                                    768: {
+                                        slidesPerView: 2.5,
+                                        autoplay: false,
+                                    },
+                                    640: {
+                                        slidesPerView: 2.1,
+                                        autoplay: false,
+                                        spaceBetween: 16
+                                    },
+                                    100: {
+                                        slidesPerView: 1.1,
+                                        autoplay: false,
+                                        spaceBetween: 16
 
-                        }
-                    }}
-                >
-                    {components?.map((item , index) =>
-                        <SwiperSlide key={index}>
-                            <div className="content-card">
-                                <div className="img-cont">
-                                    <Image src={item.icon} alt={item.title} width={200} height={200} />
-                                </div>
-                                <h4>{item.title}</h4>
-                            </div>
-                        </SwiperSlide>
-                    )}
-                </Swiper>
-            </div>
-        </div>
+                                    }
+                                }}
+                            >
+                                {components?.map((item, index) =>
+                                    <SwiperSlide key={index}>
+                                        <div className="content-card">
+                                            <div className="img-cont">
+                                                <Image src={item.icon} alt={item.title} width={200} height={200} />
+                                            </div>
+                                            <h4>{item.title}</h4>
+                                        </div>
+                                    </SwiperSlide>
+                                )}
+                            </Swiper>
+                        </div>
+                    </div>
+                    : null
+            }
+        </>
     );
 }

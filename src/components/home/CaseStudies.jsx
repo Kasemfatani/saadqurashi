@@ -1,19 +1,18 @@
 'use client'
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { ShineBorder } from '../magicui/shine-border';
-import Loading from '@/app/loading';
 import axios from 'axios';
+import Loading from '@/app/loading';
+import parse from 'html-react-parser';
 import { API_BASE_URL } from '@/lib/apiConfig';
+import Link from 'next/link';
 
-export default function Solutions() {
-
+export default function CaseStudies() {
     let [lang, setLang] = useState('en');
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -27,7 +26,7 @@ export default function Solutions() {
                 lang: localStorage.getItem('lang'), // Change language dynamically based on state
             };
             // Fetch data from the API with Axios
-            axios.get(`${API_BASE_URL}/landing/home/solutions`
+            axios.get(`${API_BASE_URL}/landing/home/study-cases`
                 , {
                     headers: headers,
                 })
@@ -42,15 +41,16 @@ export default function Solutions() {
                 });
         }
     }, []);
-    return (<>
-        {
-            loading ? <Loading /> :
-                <div className="blogs" style={{ direction: `ltr` }} id='soultions'>
-                    <div className="container m-auto">
-                        <h3>{lang === 'en' ? 'Our Solutions ' : 'الحلول'}</h3>
-                        <div className="path-swiper w-full" >
+    return (
+        <>
+            {
+                loading ? <Loading /> :
+                    <div className="case-studies" >
+                        <div className="container m-auto">
+                            <h2>How we achieve success with them?</h2>
+                            <h3>Take a  look to our case studies </h3>
                             <Swiper
-                                // navigation
+                                navigation
                                 // pagination={{ type: "bullets", clickable: true }}
                                 spaceBetween={24}
                                 slidesPerView={7.5}
@@ -85,23 +85,23 @@ export default function Solutions() {
                                     }
                                 }}
                             >
-                                {data?.map((path) =>
-                                    <SwiperSlide key={path.id}>
-                                        <ShineBorder borderWidth={3} className="relative rounded-2xl p-6 h-full" color={["#54C8E8", "#185A7D"]}>
-                                            <div className="solution-card">
-                                                <Image src={path.icon} alt="Mazar" width={200} height={200} />
-                                                <h4>{path.name}</h4>
-                                                <p>{path.short_description}</p>
-                                                <Link href={`/solution?id=${path.id}`} className='main-link-sec'><span>{lang === 'en' ? 'Know more' : 'اعرف المزيد'}</span> <i className={`fa-solid fa-chevron-${lang === 'en' ? "right" : "left"}`}></i></Link>
+                                {data?.map((ele) =>
+                                    <SwiperSlide key={ele.id}>
+                                        <div className="study-cont">
+                                            <div className="img-cont">
+                                                <Image src={ele.image} alt="" width={100} height={100} />
                                             </div>
-                                        </ShineBorder>
+                                            <h4>{ele.name}</h4>
+                                            <p>{parse(ele.short_description)}</p>
+                                            <Link href={`/case-study?id=${ele.id}`} >Read more</Link>
+                                        </div>
                                     </SwiperSlide>
                                 )}
                             </Swiper>
                         </div>
                     </div>
-                </div>
-        }
-    </>
+            }
+        </>
+
     );
 }

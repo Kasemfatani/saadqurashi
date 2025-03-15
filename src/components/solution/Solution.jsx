@@ -8,9 +8,8 @@ import { API_BASE_URL } from '@/lib/apiConfig';
 import { useSearchParams } from 'next/navigation';
 import Loading from '@/app/loading';
 import Touch from '../home/Touch';
-
+import SolContent from './SolContent';
 export default function Solution() {
-
     let [lang, setLang] = useState('en');
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -42,7 +41,6 @@ export default function Solution() {
                 });
         }
     }, []);
-    console.log(data);
 
     return (
         <div className="solution-page-cont" style={{ direction: lang == 'ar' ? 'rtl' : 'ltr' }}>
@@ -50,8 +48,9 @@ export default function Solution() {
                 loading ? <Loading /> :
                 <>
                 <SolHead data={data} lang={lang} />
+                <SolContent data={data} lang={lang} />
                 <Keycomponents data={data} lang={lang} />
-                <ROI data={data} lang={lang} />
+                {/* <ROI data={data} lang={lang} /> */}
                 <Touch />
                 </>
             }

@@ -15,8 +15,8 @@ export default function Footer() { // Defining the main functional component nam
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const [data, setData] = useState([]);
-    const [whatsapp , setWhatsapp] = useState('+966506578868');
-    const [social , setSocial] = useState([]);
+    const [whatsapp, setWhatsapp] = useState('+966506578868');
+    const [social, setSocial] = useState([]);
     useEffect(() => {
         setLoading(true);
         if (typeof window !== 'undefined') {
@@ -26,7 +26,7 @@ export default function Footer() { // Defining the main functional component nam
                 lang: localStorage.getItem('lang'), // Change language dynamically based on state
             };
             // Fetch data from the API with Axios
-            axios.get(`${API_BASE_URL}/landing/home/contacts` , {  headers: headers,  })
+            axios.get(`${API_BASE_URL}/landing/home/contacts`, { headers: headers, })
                 .then(response => {
                     setData(response.data.data);  // Set the response data to state
                     setLoading(false);  // Set loading to false
@@ -37,7 +37,7 @@ export default function Footer() { // Defining the main functional component nam
                     console.error('Error fetching data:', error);
                     setLoading(false)
                 });
-            axios.get(`${API_BASE_URL}/landing/home/social-media` , {  headers: headers,  })
+            axios.get(`${API_BASE_URL}/landing/home/social-media`, { headers: headers, })
                 .then(res => {
                     setSocial(res.data.data);  // Set the response data to state
                     setLoading(false);  // Set loading to false
@@ -50,8 +50,10 @@ export default function Footer() { // Defining the main functional component nam
 
         }
     }, []);
-   
-    
+
+    console.log(data);
+
+
     return (
         <footer className={`${lang === 'en' ? 'ltr' : 'rtl'}`}> {/* Main footer container with padding and background color */}
             <a href={`https://wa.me/${whatsapp}?text=Good%20Morning%20I-Masira`} className="fixed-what">
@@ -85,16 +87,22 @@ export default function Footer() { // Defining the main functional component nam
                     </div>
                     <div className="links">
                         <h3>{lang === 'en' ? 'Contact us' : 'اتصل بنا'}</h3>
-                        <ul>
+                        <div className="uls">
+
                             {
                                 data?.map((item, index) =>
-                                    <li key={index}>
-                                        <Link href={item.type == "mobile" ? `tel:${item.value}` : item.type == "email" ? `mailto:${item.value}` : "#footer"} key={index}>{item.value}</Link>
-                                    </li>
+                                    item.branch ?
+                                        <ul key={index}>
+                                            <li key={index}> <Link href={"#footer"} key={index}>{item.value}</Link></li>
+                                            <li key={index}> <Link href={`tel:${item.mobile}`} key={index}>{item.mobile}</Link></li>
+                                            <li key={index}> <Link href={`mailto:${item.email}`} key={index}>{item.email}</Link></li>
+                                        </ul>
+                                        : null
                                 )
                             }
-                        </ul>
+                        </div>
                     </div>
+
 
                 </div>
                 <div className="served">

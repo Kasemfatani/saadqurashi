@@ -36,15 +36,16 @@ export default function Content() {
         }
     }, []);
     return (
-        <div className="blogs" style={{ direction: `ltr` }} id='blogs'>
+        <>
             {
                 loading ? <Loading /> : data.length == 0 ? null :
-                    <div className="container m-auto">
-                        <h3>{lang === 'en' ? 'Explore our blogs' : 'استكشف مدونتنا'}</h3>
-                        <BlogsCards data={data} lang={lang} />
+                    <div className="blogs" style={{ direction: `ltr` }} id='blogs'>
+                        <div className="container m-auto">
+                            <h3>{lang === 'en' ? 'Explore our blogs' : 'استكشف مدونتنا'}</h3>
+                            <BlogsCards data={data} lang={lang} />
+                        </div>
                     </div>
-
             }
-        </div>
+        </>
     );
 }

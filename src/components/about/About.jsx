@@ -38,7 +38,6 @@ export default function About() {
                 });
         }
     }, []);
-    console.log(data);
 
     return (
         <div className="solution-page-cont about-page-cont" style={{ direction: lang == 'ar' ? 'rtl' : 'ltr' }}>

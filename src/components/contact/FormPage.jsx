@@ -21,7 +21,6 @@ export default function FormPage({ lang }) {
     const [loading, setLoading] = useState(false);
     const sendPostRequest = async (data) => {
         const url = `${API_BASE_URL}/landing/contact-us`;
-        console.log(data);
         const queryParams = {
             customer_name: data?.name,
             customer_mobile: data?.phone,
@@ -37,7 +36,6 @@ export default function FormPage({ lang }) {
                 lang: lang,
             },
         }).then(response => {
-            console.log(response);
             const message = response.data?.message || 'Operation successful';
             if (response.status === 200) {
                 // Success toast notification

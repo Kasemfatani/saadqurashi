@@ -7,7 +7,6 @@ import { ShineBorder } from '../magicui/shine-border';
 
 export default function Marq({ mainTitle, subTitle, data, isReverse }) { // Defining the main functional component named 'Footer'.
     let [lang, setLang] = useState('en');
-    console.log(data);
 
     useEffect(() => {
         if (typeof window !== 'undefined') {

@@ -39,44 +39,45 @@ export default function Who() {
         }
     }, []);
     return (
-
-        <section className={` hero-main why`} id='about' style={{ direction: lang === 'en' ? 'ltr' : 'rtl' }}>
+        <>
             {
                 loading ? <Loading /> :
-                    <div className="container m-auto">
-                        <div className="hero-about" >
-                            <motion.div
-                                initial={{ opacity: 0, x: 200 }}
-                                whileInView={{ opacity: 1, x: 0 }}
-                                transition={{
-                                    type: 'spring',
-                                    bounce: 0.2,
-                                    duration: .5,
-                                }}
-                                viewport={{ once: true }}
-                                className="r-side">
-                                <div className="img-cont">
-                                    <div className="overlay"></div>
-                                    <Image src={data.about.image} width={500} height={500} alt="Mazar" className="img-hero" />
-                                </div>
-                            </motion.div>
-                            <motion.div
-                                initial={{ opacity: 0, x: -200 }}
-                                whileInView={{ opacity: 1, x: 0 }}
-                                transition={{
-                                    type: 'spring',
-                                    bounce: 0.2,
-                                    duration: .5,
-                                }}
-                                viewport={{ once: true }}
-                                className="l-side">
-                                <h3 className='sec-title'>{data.about.title}</h3>
-                                <p className='who-p'>{data.about.description} </p>
-                                <Link href={'/about'} className='who-link'><span>{lang === 'en' ? 'Read More' : 'قراءة المزيد'}</span> <i className={`fa-solid fa-chevron-${lang === 'en' ? "right" : "left"}`}></i></Link>
-                            </motion.div>
+                    <section className={` hero-main why`} id='about' style={{ direction: lang === 'en' ? 'ltr' : 'rtl' }}>
+                        <div className="container m-auto">
+                            <div className="hero-about" >
+                                <motion.div
+                                    initial={{ opacity: 0, x: 200 }}
+                                    whileInView={{ opacity: 1, x: 0 }}
+                                    transition={{
+                                        type: 'spring',
+                                        bounce: 0.2,
+                                        duration: .5,
+                                    }}
+                                    viewport={{ once: true }}
+                                    className="r-side">
+                                    <div className="img-cont">
+                                        <div className="overlay"></div>
+                                        <Image src={data?.about?.image} width={500} height={500} alt="Mazar" className="img-hero" />
+                                    </div>
+                                </motion.div>
+                                <motion.div
+                                    initial={{ opacity: 0, x: -200 }}
+                                    whileInView={{ opacity: 1, x: 0 }}
+                                    transition={{
+                                        type: 'spring',
+                                        bounce: 0.2,
+                                        duration: .5,
+                                    }}
+                                    viewport={{ once: true }}
+                                    className="l-side">
+                                    <h3 className='sec-title'>{data?.about?.title}</h3>
+                                    <p className='who-p'>{data?.about?.description} </p>
+                                    <Link href={'/about'} className='who-link'><span>{lang === 'en' ? 'Read More' : 'قراءة المزيد'}</span> <i className={`fa-solid fa-chevron-${lang === 'en' ? "right" : "left"}`}></i></Link>
+                                </motion.div>
+                            </div>
                         </div>
-                    </div>
+                    </section >
             }
-        </section >
+        </>
     );
 }
