@@ -7,7 +7,7 @@ import Footer from '@/components/home/Footer';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import '../style/main.css';
 import { Toaster } from "@/components/ui/sonner"
-import logo from '/public/footerlogo.svg'
+import logo from '/public/logo.png'
 
 export async function generateMetadata(): Promise<Metadata> {
   const lang = typeof window !== 'undefined' && localStorage.getItem('lang') === 'ar' ? 'ar' : 'en';
