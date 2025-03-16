@@ -50,7 +50,7 @@ export default function Solutions() {
                         <h3>{lang === 'en' ? 'Our Solutions ' : 'الحلول'}</h3>
                         <div className="path-swiper w-full" >
                             <Swiper
-                                // navigation
+                                navigation
                                 // pagination={{ type: "bullets", clickable: true }}
                                 spaceBetween={24}
                                 slidesPerView={7.5}
@@ -78,7 +78,7 @@ export default function Solutions() {
                                         spaceBetween: 16
                                     },
                                     100: {
-                                        slidesPerView: 1.1,
+                                        slidesPerView: 1,
                                         autoplay: false,
                                         spaceBetween: 16
 

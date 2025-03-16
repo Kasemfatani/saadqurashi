@@ -76,3 +76,33 @@
         }
     }
 }
+.swiper-button-prev , .swiper-button-next{
+    color: $white !important;
+    width: 44px !important;
+    height: 44px !important; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: $hover;
+    flex-shrink: 0;
+    bottom: -0px !important;
+    top: auto !important;
+
+    
+    &::after{
+        font-size: 18px !important;
+    }
+}
+.swiper-button-next{
+    right: calc(50% - 52px) !important;
+    left: auto !important;
+}
+.swiper-button-prev{
+    left: calc(50% - 52px) !important;
+    right: auto !important;
+}
+
+.swiper{
+    padding-bottom: 60px !important;
+}

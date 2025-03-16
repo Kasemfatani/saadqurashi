@@ -76,12 +76,12 @@ export default function CaseStudies() {
                                         autoplay: false,
                                     },
                                     640: {
-                                        slidesPerView: 2.1,
+                                        slidesPerView: 2,
                                         autoplay: false,
                                         spaceBetween: 16
                                     },
                                     100: {
-                                        slidesPerView: 1.1,
+                                        slidesPerView: 1,
                                         autoplay: false,
                                         spaceBetween: 16
 
