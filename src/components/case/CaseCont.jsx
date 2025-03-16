@@ -8,8 +8,8 @@ export default function CaseCont({ data, lang }) {
         <div className="case-cont">
             <div className="container m-auto">
                 <div className="text">
-                    <h2>{data.customer_name}</h2>
-                    <h3>{data.intro_title}</h3>
+                    {/* <h2>{data.customer_name}</h2>
+                    <h3>{data.intro_title}</h3> */}
                     {/* <h4>{lang === 'en' ? 'Executive Summary' : 'الملخص التنفيذي'}</h4> */}
                     <h3>{lang === 'en' ? 'Problem Statement' : 'بيان المشكلة'}</h3>
                     <ul>

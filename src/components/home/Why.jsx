@@ -39,7 +39,6 @@ export default function Why() {
                 });
         }
     }, []);
-    console.log(data);
 
     return (
         <>

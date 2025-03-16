@@ -51,9 +51,6 @@ export default function Footer() { // Defining the main functional component nam
         }
     }, []);
 
-    console.log(data);
-
-
     return (
         <footer className={`${lang === 'en' ? 'ltr' : 'rtl'}`}> {/* Main footer container with padding and background color */}
             <a href={`https://wa.me/${whatsapp}?text=Good%20Morning%20I-Masira`} className="fixed-what">
