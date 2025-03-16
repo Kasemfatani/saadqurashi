@@ -27,7 +27,7 @@ export default function CaseCont({ data, lang }) {
                         {
                             data.our_approach.map((item, index) =>
                                 <li className="statment">
-                                    <h4>{item.name}</h4>
+                                    <h4> <i className="fa-solid fa-leaf"></i> <span>{item.name}</span></h4>
                                     <p>{parse(item.description)}</p>
                                 </li>
                             )
@@ -38,7 +38,7 @@ export default function CaseCont({ data, lang }) {
                         {
                             data.key_benefits.map((item, index) =>
                                 <li className="statment">
-                                    <h4>{item.name}</h4>
+                                    <h4> <i className="fa-solid fa-star-of-life"></i> <span>{item.name}</span></h4>
                                     <p>{parse(item.description)}</p>
                                 </li>
                             )

@@ -123,18 +123,20 @@
         ul {
             display: flex;
             flex-direction: column;
-            gap: 12px;
+            gap: 0px;
             padding-inline-start: 24px;
-            .statment{
-                h4{
+
+            .statment {
+                h4 {
                     display: flex;
                     align-items: center;
                     gap: 6px;
-                    
+
                 }
-                i{
-                    width: 18px;
-                    height: 18px;
+
+                i {
+                    width: 22px;
+                    height: 22px;
                     display: flex;
                     align-items: center;
                     justify-content: center;
@@ -147,6 +149,7 @@
         }
     }
 }
+
 .case-studies {
     padding: 65px 0;
     background-color: #F6F7F6;
@@ -183,8 +186,9 @@
     .swiper {
         padding: 20px;
         margin: -20px;
-        
+
     }
+
     .swiper-slide {
         height: auto;
     }
@@ -207,13 +211,14 @@
             border-radius: 8px;
             overflow: hidden;
             margin-bottom: 16px;
-            
+
             img {
                 width: 100%;
                 height: 100%;
                 -o-object-fit: cover;
                 object-fit: cover;
-                &:hover{
+
+                &:hover {
                     transform: scale(1.1);
                 }
             }
@@ -243,20 +248,24 @@
 
             }
         }
-        a{
+
+        a {
             display: flex;
             align-items: center;
             gap: 8px;
             font-size: 16px;
             font-weight: 600;
             color: $hover;
-            &:hover{
+
+            &:hover {
                 color: $main;
             }
+
             @media screen and (max-width: 767px) {
                 font-size: 14px;
             }
-            i{
+
+            i {
                 font-size: 12px;
             }
         }
@@ -264,6 +273,7 @@
     }
 
 }
+
 /* Alternating Backgrounds */
 .section-dark {
     background-color: #f3f3f3;
@@ -281,6 +291,7 @@
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -350,3 +361,17 @@
     }
 }
 
+.gallery {
+    padding: 35px 0;
+
+    h3 {
+        font-size: 28px;
+        font-weight: 700;
+        color: $hover;
+        margin-bottom: 32px;
+        text-transform: capitalize;
+        transition: color 0.3s ease-in-out;
+    }
+
+
+}

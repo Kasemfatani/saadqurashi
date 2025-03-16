@@ -2516,7 +2516,7 @@ body {
 .case-cont .text ul {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 0px;
   padding-inline-start: 24px;
 }
 .case-cont .text ul .statment h4 {
@@ -2525,8 +2525,8 @@ body {
   gap: 6px;
 }
 .case-cont .text ul .statment i {
-  width: 18px;
-  height: 18px;
+  width: 22px;
+  height: 22px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2724,4 +2724,15 @@ body {
   .cta-section p {
     font-size: 16px;
   }
+}
+.gallery {
+  padding: 35px 0;
+}
+.gallery h3 {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--main-hover);
+  margin-bottom: 32px;
+  text-transform: capitalize;
+  transition: color 0.3s ease-in-out;
 }/*# sourceMappingURL=main.css.map */
