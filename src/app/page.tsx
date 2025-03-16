@@ -8,10 +8,7 @@ import Blogs from '@/components/home/Blogs';
 import CaseStudies from '@/components/home/CaseStudies';
 import Why from '@/components/home/Why';
 export default function Home() {
-  
-  
   return (
-
     <main>
      <Hero />
      <Solutions />

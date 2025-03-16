@@ -26,7 +26,7 @@ export default function Who({ data, lang }) {
                         viewport={{ once: true }}
                         className="l-side">
                         <h3 className='sec-title'>{data.title}</h3>
-                        <p className='who-p'>{data.description} </p>
+                        <p className='who-p'>{data.full_description} </p>
                     </motion.div>
                     <motion.div
                         initial={{ opacity: 0, x: 200 }}
