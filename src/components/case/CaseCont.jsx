@@ -16,7 +16,7 @@ export default function CaseCont({ data, lang }) {
                         {
                             data.problem_statements.map((item, index) =>
                                 <li className="statment">
-                                    <h4>{item.name}</h4>
+                                    <h4> <i className="fa-solid fa-check"></i> <span>{item.name}</span></h4>
                                     <p>{parse(item.description)}</p>
                                 </li>
                             )

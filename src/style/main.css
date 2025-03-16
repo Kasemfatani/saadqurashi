@@ -2517,87 +2517,25 @@ body {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  padding-left: 24px;
-  list-style-type: disc;
+  padding-inline-start: 24px;
+}
+.case-cont .text ul .statment h4 {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.case-cont .text ul .statment i {
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #2ECC71;
+  font-size: 14px;
+  color: var(--white-color);
 }
 
-/* Alternating Backgrounds */
-.section-dark {
-  background-color: #f3f3f3;
-  padding: 60px 0;
-}
-
-.section-light {
-  background-color: #ffffff;
-  padding: 60px 0;
-}
-
-/* Smooth Animations */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-/* Styled Buttons */
-.button {
-  background-color: #008080;
-  color: white;
-  padding: 12px 20px;
-  border-radius: 8px;
-  font-weight: bold;
-  transition: all 0.3s ease-in-out;
-}
-.button:hover {
-  background-color: #005f5f;
-  transform: scale(1.05);
-}
-
-/* Call-to-Action Section */
-.cta-section {
-  background-color: #008080;
-  color: white;
-  padding: 40px;
-  text-align: center;
-  border-radius: 10px;
-  margin: 40px 0;
-}
-.cta-section h2 {
-  font-size: 28px;
-  margin-bottom: 10px;
-}
-.cta-section p {
-  font-size: 18px;
-  max-width: 600px;
-  margin: 0 auto 20px auto;
-}
-.cta-section .button {
-  background: white;
-  color: #008080;
-  font-size: 18px;
-  padding: 14px 24px;
-  font-weight: 600;
-}
-.cta-section .button:hover {
-  background: #e6e6e6;
-}
-
-/* Responsive Design */
-@media screen and (max-width: 767px) {
-  .cta-section {
-    padding: 30px;
-  }
-  .cta-section h2 {
-    font-size: 24px;
-  }
-  .cta-section p {
-    font-size: 16px;
-  }
-}
 .case-studies {
   padding: 65px 0;
   background-color: #F6F7F6;
@@ -2708,4 +2646,82 @@ body {
 }
 .case-studies .study-cont a i {
   font-size: 12px;
+}
+
+/* Alternating Backgrounds */
+.section-dark {
+  background-color: #f3f3f3;
+  padding: 60px 0;
+}
+
+.section-light {
+  background-color: #ffffff;
+  padding: 60px 0;
+}
+
+/* Smooth Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Styled Buttons */
+.button {
+  background-color: #008080;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}
+.button:hover {
+  background-color: #005f5f;
+  transform: scale(1.05);
+}
+
+/* Call-to-Action Section */
+.cta-section {
+  background-color: #008080;
+  color: white;
+  padding: 40px;
+  text-align: center;
+  border-radius: 10px;
+  margin: 40px 0;
+}
+.cta-section h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+.cta-section p {
+  font-size: 18px;
+  max-width: 600px;
+  margin: 0 auto 20px auto;
+}
+.cta-section .button {
+  background: white;
+  color: #008080;
+  font-size: 18px;
+  padding: 14px 24px;
+  font-weight: 600;
+}
+.cta-section .button:hover {
+  background: #e6e6e6;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 767px) {
+  .cta-section {
+    padding: 30px;
+  }
+  .cta-section h2 {
+    font-size: 24px;
+  }
+  .cta-section p {
+    font-size: 16px;
+  }
 }/*# sourceMappingURL=main.css.map */
