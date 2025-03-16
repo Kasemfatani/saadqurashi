@@ -7,6 +7,7 @@ import Loading from '@/app/loading';
 import SolHead from '../solution/SolHead';
 import CaseCont from './CaseCont';
 import Gallery from './Gallery';
+import Touch from '../home/Touch';
 
 export default function CaseStudy() {
 
@@ -50,6 +51,7 @@ export default function CaseStudy() {
                 <SolHead data={data} lang={lang} />
                 <CaseCont data={data} lang={lang} />
                 <Gallery data={data} lang={lang} />
+                <Touch  text= {lang === 'en' ? 'Ready to optimize your industrial operations? ' : 'مستعد لتحسين عملياتك الصناعية؟'} lang={lang} />
                 </>
             }
         </div>
