@@ -32,7 +32,7 @@ export default function Touch({ text }) { // Defining the main functional compon
             </div>
             <div className="ready ">
                 <div className="container m-auto">
-                    <h2>{text ? text : lang === 'en' ? 'Get in touch with us  ' : 'كن على تواصل معنا'} </h2>
+                    <h2>{text == 'non' ? lang === 'en' ? 'Get in touch with us  ' : 'كن على تواصل معنا' : text} </h2>
                     {
                         text ? null :
                             <p>{lang === 'en' ? 'Have any questions or need assistance? Reach out to us, and our team will be happy to help.' : 'هل لديك أي أسئلة أو تحتاج إلى مساعدة؟ تواصل معنا، وسيسعد فريقنا بمساعدتك.'}</p>

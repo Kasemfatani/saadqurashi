@@ -13,7 +13,7 @@ export default function Home() {
      <Solutions />
      <Who />
      <Partners />
-     <Touch />
+     {/* <Touch /> */}
      <Blogs />
     </main>
   );

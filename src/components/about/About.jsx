@@ -47,7 +47,7 @@ export default function About() {
                         <AboutUs data={data.about} lang={lang} />
                         <MessVis mission={data.mission}  vision={data.vision} lang={lang} />
                         <Marq mainTitle={lang === 'en' ? 'Our Partners' : 'شركاءنا'} subTitle={lang === 'en' ? 'Powering innovation with industry-leading partnerships.' : 'تعزيز الابتكار من خلال شراكات رائدة في القطاع الصناعي.'} data={data.partners} isReverse={true} />
-                        <Touch />
+                        <Touch text={lang === 'en' ? 'Get in touch with us  ' : 'كن على تواصل معنا'}/>
                     </>
             }
         </div>

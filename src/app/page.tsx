@@ -9,7 +9,9 @@ import CaseStudies from '@/components/home/CaseStudies';
 import Why from '@/components/home/Why';
 export default function Home() {
   
+  
   return (
+
     <main>
      <Hero />
      <Solutions />
@@ -17,7 +19,7 @@ export default function Home() {
      <Why />
      <Partners />
      <CaseStudies />
-     <Touch />
+     <Touch text= 'non' />
      <Blogs />
     </main>
   );

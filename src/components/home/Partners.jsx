@@ -1,16 +1,6 @@
 'use client'
 import React, { useEffect, useState } from 'react';
 import Marq from '@/components/home/Marq';
-import img1 from '/public/Partners/1.png'
-import img2 from '/public/Partners/2.png'
-import img3 from '/public/Partners/3.png'
-import img4 from '/public/Partners/4.png'
-import img5 from '/public/Partners/5.png'
-import img6 from '/public/Partners/6.png'
-import img7 from '/public/Partners/7.png'
-import img8 from '/public/Partners/8.png'
-import img9 from '/public/Partners/9.png'
-import img12 from '/public/Partners/12.png'
 import axios from 'axios';
 import { API_BASE_URL } from '@/lib/apiConfig';
 import Loading from '@/app/loading';

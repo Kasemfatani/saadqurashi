@@ -51,7 +51,7 @@ export default function CaseStudy() {
                 <SolHead data={data} lang={lang} />
                 <CaseCont data={data} lang={lang} />
                 <Gallery data={data} lang={lang} />
-                <Touch  text= {lang === 'en' ? 'Ready to optimize your industrial operations? ' : 'مستعد لتحسين عملياتك الصناعية؟'} lang={lang} />
+                <Touch  text= {lang === 'en' ? 'Ready to optimize your industrial operations? ' : 'مستعد لتحسين عملياتك الصناعية؟'} />
                 </>
             }
         </div>

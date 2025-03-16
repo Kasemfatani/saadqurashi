@@ -51,7 +51,7 @@ export default function Solution() {
                 <SolContent data={data} lang={lang} />
                 <Keycomponents data={data} lang={lang} />
                 {/* <ROI data={data} lang={lang} /> */}
-                <Touch />
+                <Touch text={lang === 'en' ? 'Get in touch with us  ' : 'كن على تواصل معنا'} />
                 </>
             }
         </div>
