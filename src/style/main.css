@@ -1581,11 +1581,10 @@ footer .served {
 }
 .ready-cont .ready {
   padding: 56px 0px;
-  background-color: rgb(100, 138, 162);
+  background-color: rgba(100, 138, 162, 0.95);
 }
 .ready-cont .ready .container {
   display: flex;
-  align-items: center;
   flex-direction: column;
 }
 .ready-cont .ready h2 {
@@ -1606,6 +1605,8 @@ footer .served {
   background-color: var(--white-color);
   width: -moz-fit-content;
   width: fit-content;
+  position: relative;
+  z-index: 5;
 }
 .ready-cont .ready a:hover {
   background-color: var(--main-color);
@@ -1614,6 +1615,9 @@ footer .served {
 
 .main-touch .ready-cont .ready {
   background-color: rgba(0, 38, 62, 0.95);
+}
+.main-touch .ready-cont .ready .container {
+  align-items: center;
 }
 
 .main-link-sec {
