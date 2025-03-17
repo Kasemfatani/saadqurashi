@@ -273,6 +273,7 @@
             margin-bottom: 24px;
             line-height: 28px;
             color: $white;
+            text-align: justify;
 
             @media screen and (max-width: 767px) {
                 font-size: 14px;
@@ -515,9 +516,10 @@
                 color: $main;
             }
             p{
-                font-size: 24;
+                font-size: 18px;
                 font-weight: 400;
                 color: #222222;
+                text-align: justify;
             }
         }
     }

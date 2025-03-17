@@ -86,7 +86,7 @@
 
     .ready {
         padding: 56px 0px;
-        background-color: rgba(0, 38, 62, .95);
+        background-color: rgba(100, 138, 162, 1);
         .container {
             display: flex;
             align-items: center;
@@ -115,6 +115,13 @@
         a:hover {
             background-color: $main;
             color: $white;
+        }
+    }
+}
+.main-touch{
+    .ready-cont{
+        .ready{
+            background-color: rgba(0, 38, 62, .95);
         }
     }
 }

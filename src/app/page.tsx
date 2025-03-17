@@ -18,7 +18,9 @@ export default function Home() {
      <Why />
      <Partners />
      <CaseStudies />
+     <div className="main-touch">
      <Touch text= 'non' />
+     </div>
      <Blogs />
     </main>
   );

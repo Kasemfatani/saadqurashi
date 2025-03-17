@@ -685,6 +685,12 @@ footer .content .links h3 {
   font-weight: 600;
   color: var(--white-color);
 }
+footer .content .links h4 {
+  margin-bottom: 12px;
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--white-color);
+}
 footer .content .links ul {
   display: flex;
   flex-direction: column;
@@ -987,6 +993,7 @@ footer .served {
   margin-bottom: 24px;
   line-height: 28px;
   color: var(--white-color);
+  text-align: justify;
 }
 @media screen and (max-width: 767px) {
   .hero-about .l-side .who-p {
@@ -1205,9 +1212,10 @@ footer .served {
   color: var(--main-color);
 }
 .why-us .about-us-wrapper .l-side p {
-  font-size: 24;
+  font-size: 18px;
   font-weight: 400;
   color: #222222;
+  text-align: justify;
 }
 
 .about-page-cont {
@@ -1573,7 +1581,7 @@ footer .served {
 }
 .ready-cont .ready {
   padding: 56px 0px;
-  background-color: rgba(0, 38, 62, 0.95);
+  background-color: rgb(100, 138, 162);
 }
 .ready-cont .ready .container {
   display: flex;
@@ -1602,6 +1610,10 @@ footer .served {
 .ready-cont .ready a:hover {
   background-color: var(--main-color);
   color: var(--white-color);
+}
+
+.main-touch .ready-cont .ready {
+  background-color: rgba(0, 38, 62, 0.95);
 }
 
 .main-link-sec {
