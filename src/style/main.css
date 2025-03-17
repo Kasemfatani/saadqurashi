@@ -1480,8 +1480,8 @@ footer .served {
   padding: 0 16px;
 }
 .ncti .container a:hover {
-  background-color: white;
-  color: var(--main-color);
+  background-color: var(--main-color);
+  color: var(--main-hover);
 }
 .ncti .container a i {
   font-size: 10px;
