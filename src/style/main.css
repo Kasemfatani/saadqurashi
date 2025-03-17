@@ -2161,6 +2161,22 @@ footer .served {
   padding: 0 0 100px;
 }
 
+.sol-head-p {
+  padding: 24px 0;
+}
+.sol-head-p h3 {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--main-hover);
+  margin-bottom: 12px;
+}
+.sol-head-p p {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--main-hover);
+  margin-bottom: 0;
+}
+
 body {
   position: relative;
 }
@@ -2503,7 +2519,7 @@ body {
   }
 }
 .case-cont .text h3 {
-  font-size: 28px;
+  font-size: 24px;
   font-weight: 700;
   color: var(--main-hover);
   margin-bottom: 32px;

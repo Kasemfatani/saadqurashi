@@ -148,3 +148,19 @@
 
     }
 }
+
+.sol-head-p{
+    padding: 24px 0;
+    h3{
+        font-size: 26px;
+        font-weight: 700;
+        color: $hover;
+        margin-bottom: 12px;
+    }
+    p{
+        font-size: 18px;
+        font-weight: 600;
+        color: $hover;
+        margin-bottom: 0;
+    }
+}

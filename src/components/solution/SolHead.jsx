@@ -11,16 +11,24 @@ import solImage from '/public/ters.svg'
 
 export default function SolHead({ data, lang }) {
     return (
-        <div className="sol-header" style={{ backgroundImage: `url(${data.image})`, backgroundSize: 'cover', backgroundPosition: 'center', direction: `${lang === 'en' ? 'ltr' : 'rtl'}` }}>
-            <div className="overlay">
-                <Image src={solImage} alt="Mazar" className='abs-img' width={200} height={200} />
-                <div className="container m-auto">
-                    <div className="text">
-                        <h2>{data.name}</h2>
-                        <p>{parse(data.description)}</p>
+        <>
+            <div className="sol-header" style={{ backgroundImage: `url(${data.image})`, backgroundSize: 'cover', backgroundPosition: 'center', direction: `${lang === 'en' ? 'ltr' : 'rtl'}` }}>
+                <div className="overlay">
+                    <Image src={solImage} alt="Mazar" className='abs-img' width={200} height={200} />
+                    <div className="container m-auto">
+                        <div className="text">
+                            <h2>{data.name}</h2>
+                            {/* <p>{parse(data.description)}</p> */}
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+            <div className="sol-head-p">
+                <div className="container m-auto">
+                    <h3>{data.name}</h3>
+                    <p>{parse(data.description)}</p>
+                </div>
+            </div>
+        </>
     );
 }
