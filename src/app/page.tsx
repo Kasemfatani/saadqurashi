@@ -7,12 +7,14 @@ import Solutions from '@/components/home/Solutions';
 import Blogs from '@/components/home/Blogs';
 import CaseStudies from '@/components/home/CaseStudies';
 import Why from '@/components/home/Why';
+import Ncit from '@/components/home/Ncit';
 export default function Home() {
   return (
     <main>
      <Hero />
      <Solutions />
      <Who />
+     <Ncit />
      <Why />
      <Partners />
      <CaseStudies />

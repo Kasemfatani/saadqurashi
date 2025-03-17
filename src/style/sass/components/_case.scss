@@ -162,8 +162,9 @@
         font-size: 32px;
         font-weight: 700;
         color: $hover;
-        margin-bottom: 7px;
+        margin: 0 auto 7px;
         text-align: center;
+        max-width: 800px;
 
         @media screen and (max-width: 767px) {
             font-size: 24px;
@@ -175,8 +176,9 @@
         font-weight: 600;
         color: #3C7B9C;
         text-align: center;
-        margin-bottom: 34px;
-
+        margin:0 auto 34px;
+        max-width: 600px;
+        
         @media screen and (max-width: 767px) {
             font-size: 20px;
             margin-bottom: 24px;
