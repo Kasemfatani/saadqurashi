@@ -43,11 +43,12 @@ export default function About() {
         <div className="solution-page-cont about-page-cont" style={{ direction: lang == 'ar' ? 'rtl' : 'ltr' }}>
             {
                 loading ? <Loading /> :
+
                     <>
                         <AboutUs data={data.about} lang={lang} />
-                        <MessVis mission={data.mission}  vision={data.vision} lang={lang} />
-                        <Marq mainTitle={lang === 'en' ? 'Our Partners' : 'شركاءنا'} subTitle={lang === 'en' ? 'Powering innovation with industry-leading partnerships.' : 'تعزيز الابتكار من خلال شراكات رائدة في القطاع الصناعي.'} data={data.partners} isReverse={true} />
-                        <Touch text={lang === 'en' ? 'Get in touch with us  ' : 'كن على تواصل معنا'}/>
+                        <MessVis mission={data.mission} vision={data.vision} lang={lang} />
+                        <Marq mainTitle={lang === 'en' ? 'Our Partners' : 'شركاءنا'} subTitle={lang === 'en' ? 'We work with the following brands' : 'نحن نعمل مع العلامات التجارية التالية'} data={data.partners} isReverse={true} />
+                        <Touch text={lang === 'en' ? 'Get in touch with us  ' : 'كن على تواصل معنا'} />
                     </>
             }
         </div>
