@@ -85,14 +85,13 @@ export default function Footer() { // Defining the main functional component nam
                     <div className="links">
                         <h3>{lang === 'en' ? 'Contact us' : 'اتصل بنا'}</h3>
                         <div className="uls">
-
                             {
                                 data?.map((item, index) =>
                                     item.branch ?
                                         <div className="ul-cont">
                                             <h4>{item.branch}</h4>
+                                            <h4>{item.value}</h4>
                                             <ul key={index}>
-                                                <li key={index}> <Link href={"#footer"} key={index}>{item.value}</Link></li>
                                                 <li key={index}> <Link href={`tel:${item.mobile}`} key={index}>{item.mobile}</Link></li>
                                                 <li key={index}> <Link href={`mailto:${item.email}`} key={index}>{item.email}</Link></li>
                                             </ul>
