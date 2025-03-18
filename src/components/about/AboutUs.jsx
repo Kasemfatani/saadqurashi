@@ -1,7 +1,8 @@
+'use client'
 import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { parse } from 'html-react-parser';
+import parse from 'html-react-parser'; // Ensure correct import
 
 export default function Who({ data, lang }) {
 
