@@ -22,9 +22,9 @@ export default function Ncit() { // Defining the main functional component named
             <Image src={sisiabs} alt="masira" className='abs' width={200} height={200} />
             <div className="container m-auto">
                 <div className="ncti-cont">
-                    <Image src={ncit} alt="masira" width={200} height={200} />
                     <Image src={masanea} alt="masira" width={200} height={200} />
                     <Image src={wezara} alt="masira" width={200} height={200} />
+                    <Image src={ncit} alt="masira" width={200} height={200} />
 
                 </div>
                 <h3>{lang == 'en' ? "Certified SIRI Evaluators" : " مُقيِّمو SIRI المعتمدون"}</h3>
