@@ -127,7 +127,11 @@
 .ncti {
     padding: 56px 0;
     position: relative;
-
+    .ncti-cont{
+        display: flex;
+        align-items: center;
+        gap: 16px;
+    }
     .abs {
         position: absolute;
         top: 50%;
