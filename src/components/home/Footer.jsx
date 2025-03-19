@@ -79,7 +79,7 @@ export default function Footer() { // Defining the main functional component nam
                             <li><Link href="/#soultions">{lang === 'en' ? 'Solutions ' : 'الخدمات'}</Link></li>
                             <li><Link href="/about">{lang === 'en' ? 'About Us' : 'من نحن'}</Link></li>
                             <li><Link href="/#blogs">{lang === 'en' ? 'Blogs' : 'المقالات'}</Link></li>
-                            <li><Link href="/#contact">{lang === 'en' ? 'Contact us' : 'اتصل بنا'}</Link></li>
+                            <li><Link href="/contact">{lang === 'en' ? 'Contact us' : 'اتصل بنا'}</Link></li>
                         </ul>
                     </div>
                     <div className="links">
