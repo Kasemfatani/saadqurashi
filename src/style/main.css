@@ -2636,18 +2636,29 @@ body {
   font-weight: 700;
   color: #222222;
 }
+.case-cont .text ol {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  padding-inline-start: 24px;
+  list-style-type: decimal;
+  font-size: 20px;
+}
 .case-cont .text ul {
   display: flex;
   flex-direction: column;
   gap: 0px;
   padding-inline-start: 24px;
 }
-.case-cont .text ul .statment h4 {
+.case-cont .text .statment {
+  font-size: 22px;
+}
+.case-cont .text .statment h4 {
   display: flex;
   align-items: center;
   gap: 6px;
 }
-.case-cont .text ul .statment i {
+.case-cont .text .statment i {
   width: 22px;
   height: 22px;
   display: flex;

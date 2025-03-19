@@ -48,7 +48,7 @@ export default function CaseStudies() {
         <>
             {
                 loading ? <Loading /> :
-                    <div className="case-studies" >
+                    <div className="case-studies" id='case_studies'>
                         <div className="container m-auto">
                             <h2>{lang === 'en' ? 'Driving Digital Transformation for Leading Industries' : 'تحقيق التحول الرقمي للمصانع الرائدة'}</h2>
                             <h3>{lang === 'en' ? 'At i-Masira, we deliver real, measurable impact. Explore how our smart solutions have transformed factories across Saudi Arabia.' : 'في i-Masira، نقدم نُحقق أثرًا ملموسًا وملموسًا. اكتشف كيف ساهمت حلولنا الذكية في إحداث نقلة نوعية في المصانع في جميع أنحاء المملكة العربية السعودية.'}</h3>

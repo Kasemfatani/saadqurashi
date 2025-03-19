@@ -23,14 +23,17 @@ export default function Header() {
       }
     }
   }, [lang]);
+  console.log(pathname);
+  
   return (
     <header className={` header`} style={{ direction: lang === 'ar' ? 'rtl' : 'ltr' }} >
       <div className="container m-auto flex items-center gap-2 justify-between">
         <Link href="/"> <Image src={logo} alt="logo" className="logo-img" /></Link>
         <div className="links">
-          <Link href="/about" className={pathname === '/#about' ? 'active' : 'normal-Link'}>{lang === 'en' ? 'About Us' : 'من نحن'}</Link>
+          <Link href="/about" className={pathname === '/about' ? 'active' : 'normal-Link'}>{lang === 'en' ? 'About Us' : 'من نحن'}</Link>
           <Link href="/#soultions" className={pathname === '/#soultions' ? 'active' : 'normal-Link'}>{lang === 'en' ? 'Solutions' : 'الحلول'}</Link>
           <Link href="/#blogs" className={pathname === '/#about' ? 'active' : 'normal-Link'}>{lang === 'en' ? 'Blogs' : 'المقالات'}</Link>
+          <Link href={"/#case_studies"} className={pathname === '/#case_studies' ? 'active' : 'normal-Link'}>{lang === 'en' ? 'Case Studies' : ' المثاليات'}</Link>
           {
             pathname === '/' ?
               <Link href="/contact" className='book-link' >{lang === 'en' ? 'Contact us' : 'اتصل بنا'}</Link>
@@ -70,10 +73,12 @@ export default function Header() {
         }}>
           <div className="links">
             <Link href="/" className={pathname === '/' ? 'active' : 'normal-Link'}>{lang === 'en' ? 'Home' : 'الرئيسية'}</Link>
-            <Link href="/about" className={pathname === '/#about' ? 'active' : 'normal-Link'}>{lang === 'en' ? 'About' : 'من نحن'}</Link>
+            <Link href="/about" className={pathname === '/about' ? 'active' : 'normal-Link'}>{lang === 'en' ? 'About' : 'من نحن'}</Link>
             <Link href="/#soultions " className={pathname === '/#soultions ' ? 'active' : 'normal-Link'}>{lang === 'en' ? 'Solutions' : 'الحلول'}</Link>
             <Link href="/#blogs" className={pathname === '/#about' ? 'active' : 'normal-Link'}>{lang === 'en' ? 'Blogs' : 'المقالات'}</Link>
+            <Link href="/#case_studies" className={pathname === '/#case_studies' ? 'active' : 'normal-Link'}>{lang === 'en' ? 'Case Studies' : ' المثاليات'}</Link>
             <Link href="/contact" className='book-link' >{lang === 'en' ? 'Contact us' : 'اتصل بنا'}</Link>
+
             {/* <div
               className="lang-btn"
               onClick={() => {

@@ -119,32 +119,40 @@
                 }
             }
         }
-
+        ol{
+            display: flex;
+            flex-direction: column;
+            gap: 0px;
+            padding-inline-start: 24px;
+            list-style-type: decimal;
+            font-size: 20px;
+        }
         ul {
             display: flex;
             flex-direction: column;
             gap: 0px;
             padding-inline-start: 24px;
 
-            .statment {
-                h4 {
-                    display: flex;
-                    align-items: center;
-                    gap: 6px;
+        }
+        .statment {
+            font-size: 22px;
+            h4 {
+                display: flex;
+                align-items: center;
+                gap: 6px;
 
-                }
+            }
 
-                i {
-                    width: 22px;
-                    height: 22px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    border-radius: 50%;
-                    background-color: #2ECC71;
-                    font-size: 14px;
-                    color: $white;
-                }
+            i {
+                width: 22px;
+                height: 22px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                background-color: #2ECC71;
+                font-size: 14px;
+                color: $white;
             }
         }
     }

@@ -12,16 +12,16 @@ export default function CaseCont({ data, lang }) {
                     <h3>{data.intro_title}</h3> */}
                     {/* <h4>{lang === 'en' ? 'Executive Summary' : 'الملخص التنفيذي'}</h4> */}
                     <h3>{lang === 'en' ? 'Problem Statement' : 'بيان المشكلة'}</h3>
-                    <ul>
+                    <ol>
                         {
                             data.problem_statements.map((item, index) =>
                                 <li className="statment">
-                                    <h4> <i className="fa-solid fa-check"></i> <span>{item.name}</span></h4>
+                                    <h4> <span>{item.name}</span></h4>
                                     <p>{parse(item.description)}</p>
                                 </li>
                             )
                         }
-                    </ul>
+                    </ol>
                     <h3>{lang === 'en' ? 'Our Approach ' : 'نهجنا'}</h3>
                     <ul>
                         {
