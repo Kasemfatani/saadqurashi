@@ -108,6 +108,9 @@
     &::after {
         font-size: 18px !important;
     }
+    &:hover{
+        background-color: $main;
+    }
 }
 
 .swiper-button-next {

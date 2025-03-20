@@ -293,7 +293,7 @@ html[dir=ltr] .progress-bar {
 
 .fixed-what {
   position: fixed;
-  bottom: 122px;
+  bottom: 70px;
   inset-inline-start: 10px;
   z-index: 10;
   text-decoration: none !important;
@@ -1426,6 +1426,10 @@ footer .served {
 .swiper-button-next::after {
   font-size: 18px !important;
 }
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background-color: var(--main-color);
+}
 
 .swiper-button-next {
   right: calc(50% - 52px) !important;
@@ -1642,6 +1646,9 @@ footer .served {
   font-weight: 600;
   text-align: center;
   text-wrap: nowrap;
+}
+.main-link-sec:hover {
+  background-color: var(--main-color);
 }
 
 .messVis .miss-vis-cont {
