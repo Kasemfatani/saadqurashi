@@ -7,7 +7,6 @@ import swivt from '/public/touch-swivt.svg';
 
 export default function Touch({ text }) { // Defining the main functional component named 'Footer'.
     let [lang, setLang] = useState('en');
-    console.log(text);
 
     useEffect(() => {
         if (typeof window !== 'undefined') {

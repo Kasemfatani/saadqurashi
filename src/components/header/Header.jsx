@@ -23,7 +23,6 @@ export default function Header() {
       }
     }
   }, [lang]);
-  console.log(pathname);
   
   return (
     <header className={` header`} style={{ direction: lang === 'ar' ? 'rtl' : 'ltr' }} >

@@ -1,7 +1,6 @@
 'use client'
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
-import Marquee from '../ui/marquee';
 import { cn } from '@/lib/utils';
 import { ShineBorder } from '../magicui/shine-border';
 
@@ -40,7 +39,7 @@ export default function Marq({ mainTitle, subTitle, data, isReverse }) { // Defi
             <div className="marq" style={{ direction: 'ltr' }}>
 
                 {data?.map((review, index) => (
-                    <ShineBorder borderWidth={3} className="relative rounded-2xl p-0 h-full  min-h-0 min-w-0" color={[ "#54C8E8", "#185A7D"]}>
+                    <ShineBorder borderWidth={3} className="relative rounded-2xl p-0 h-full  min-h-0 min-w-0" color={[ "#54C8E8", "#185A7D"]} key={index}>
                         <div className="part-cont" >
                             <Image src={review.image} alt="Mazar" width={200} height={200} />
                         </div>

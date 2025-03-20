@@ -42,7 +42,6 @@ export default function CaseStudies() {
                 });
         }
     }, []);
-    console.log(data);
     
     return (
         <>

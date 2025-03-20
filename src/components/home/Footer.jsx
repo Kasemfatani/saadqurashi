@@ -66,7 +66,7 @@ export default function Footer() { // Defining the main functional component nam
                             <div className="social">
                                 {
                                     social?.map((item, index) =>
-                                        <Link href={item.value} key={index} target='_blank'><i className={`fa-brands fa-${item.type}`} key={index}></i></Link>
+                                        <Link href={item.value} key={index} target='_blank'> <i className={`fa-brands fa-${item.type}`}></i></Link>
                                     )
                                 }
 
@@ -88,7 +88,7 @@ export default function Footer() { // Defining the main functional component nam
                             {
                                 data?.map((item, index) =>
                                     item.branch ?
-                                        <div className="ul-cont">
+                                        <div className="ul-cont" key={index}>
                                             <h4>{item.branch}</h4>
                                             <h4>{item.value}</h4>
                                             <ul key={index}>
