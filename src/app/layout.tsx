@@ -24,7 +24,8 @@ export async function generateMetadata(): Promise<Metadata> {
       siteName: "i-Masira",
       images: [
         {
-          url: seoData?.seo_image || 'https://app.i-masira.com/storage/data/37/6qhdOWA8qgwKfAGousqkRUnco03ye0QJXYIGDfz2.svg' ,
+          // url: seoData?.seo_image || logo.src ,
+          url:  logo.src ,
           width: 1200,
           height: 630,
           alt: 'i-Masira',
