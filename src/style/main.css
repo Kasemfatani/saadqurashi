@@ -1453,6 +1453,13 @@ footer .served {
   display: flex;
   align-items: center;
   gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+@media screen and (max-width: 767px) {
+  .ncti .ncti-cont {
+    gap: 8px;
+  }
 }
 .ncti .abs {
   position: absolute;
@@ -1471,6 +1478,11 @@ footer .served {
   width: auto;
   margin-bottom: 5px;
 }
+@media screen and (max-width: 767px) {
+  .ncti .container img {
+    height: 30px;
+  }
+}
 .ncti .container h3 {
   color: var(--main-hover);
   font-size: 32px;
@@ -1482,7 +1494,7 @@ footer .served {
   font-weight: 400;
   color: #222;
   margin-bottom: 32px;
-  text-align: center;
+  text-align: justify;
 }
 .ncti .container a {
   display: flex;
