@@ -26,7 +26,7 @@ export default function SolHead({ data, lang }) {
             <div className="sol-head-p">
                 <div className="container m-auto">
                     <h3>{data.name}</h3>
-                    <p>{parse(data.description)}</p>
+                    <p>{parse(data?.description)}</p>
                 </div>
             </div>
         </>
