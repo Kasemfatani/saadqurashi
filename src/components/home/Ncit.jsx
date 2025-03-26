@@ -18,7 +18,7 @@ export default function Ncit() { // Defining the main functional component named
     }, []);
     return (
 
-        <div className="ncti" style={{ direction: `${lang === 'en' ? 'ltr' : 'rtl'}` }}>
+        <div className={lang == 'en' ? "ncti" : " ncti ncit-ar"} style={{ direction: `${lang === 'en' ? 'ltr' : 'rtl'}` }}>
             <Image src={sisiabs} alt="masira" className='abs' width={200} height={200} />
             <div className="container m-auto">
                 <div className="ncti-cont">

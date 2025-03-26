@@ -108,7 +108,8 @@
     &::after {
         font-size: 18px !important;
     }
-    &:hover{
+
+    &:hover {
         background-color: $main;
     }
 }
@@ -130,23 +131,27 @@
 .ncti {
     padding: 56px 0;
     position: relative;
-    .ncti-cont{
+
+    .ncti-cont {
         display: flex;
         align-items: center;
         gap: 16px;
         flex-wrap: wrap;
         justify-content: center;
+
         @media screen and (max-width: 767px) {
             gap: 8px;
-            
+
         }
     }
+
     .abs {
         position: absolute;
         top: 50%;
         inset-inline-start: 50%;
         transform: translate(-50%, -50%);
     }
+
 
     .container {
         display: flex;
@@ -158,9 +163,10 @@
             height: 41px;
             width: auto;
             margin-bottom: 5px;
+
             @media screen and (max-width: 767px) {
                 height: 30px;
-                
+
             }
         }
 
@@ -202,5 +208,11 @@
                 font-size: 10px;
             }
         }
+    }
+}
+
+.ncit-ar{
+    .abs {
+        transform: translate(50%, -50%);
     }
 }

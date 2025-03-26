@@ -1516,6 +1516,10 @@ footer .served {
   font-size: 10px;
 }
 
+.ncit-ar .abs {
+  transform: translate(50%, -50%);
+}
+
 .countries-section {
   padding: 56px 0 32px 0;
   display: flex;
