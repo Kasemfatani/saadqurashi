@@ -11,7 +11,7 @@ export default function CaseCont({ data, lang }) {
                     {/* <h2>{data.customer_name}</h2>
                     <h3>{data.intro_title}</h3> */}
                     {/* <h4>{lang === 'en' ? 'Executive Summary' : 'الملخص التنفيذي'}</h4> */}
-                    <h3>{lang === 'en' ? 'Problem Statement' : 'بيان المشكلة'}</h3>
+                    <h3>{lang === 'en' ? 'Problem Statement' : 'التحديات'}</h3>
                     <ol>
                         {
                             data.problem_statements.map((item, index) =>
@@ -22,7 +22,7 @@ export default function CaseCont({ data, lang }) {
                             )
                         }
                     </ol>
-                    <h3>{lang === 'en' ? 'Our Approach ' : 'نهجنا'}</h3>
+                    <h3>{lang === 'en' ? 'Our Approach ' : 'الحلول التي قدمناها'}</h3>
                     <ul>
                         {
                             data.our_approach.map((item, index) =>

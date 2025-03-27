@@ -47,7 +47,7 @@ export default function Why() {
                     <div className="why-masira">
                         <div className="container m-auto">
                             <h2>{lang === 'en' ? 'Why Choose i-Masira? ' : 'i-Masira لماذا تختار '}</h2>
-                            <h3>{lang === 'en' ? 'Smart Solutions. Real Impact.' : 'الحلول المبتكرة. الاستثمار الحقيقي.'}</h3>
+                            <h3>{lang === 'en' ? 'Smart Solutions. Real Impact.' : '.الحلول المبتكرة. الاستثمار الحقيقي'}</h3>
                             <div className="grid-cont">
                                 {
                                     data.map((item, index) =>

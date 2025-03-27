@@ -52,7 +52,7 @@ export default function Footer() { // Defining the main functional component nam
     }, []);
 
     return (
-        <footer className={`${lang === 'en' ? 'ltr' : 'rtl'}`}> {/* Main footer container with padding and background color */}
+        <footer style={{ direction: lang == 'ar' ? 'rtl' : 'ltr' }}> {/* Main footer container with padding and background color */}
             <a href={`https://wa.me/${whatsapp}?text=Good%20Morning%20I-Masira`} className="fixed-what">
                 <i className="fa-brands fa-whatsapp"></i>
             </a>

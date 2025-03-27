@@ -32,7 +32,7 @@ export default function Header() {
           <Link href="/about" className={pathname === '/about' ? 'active' : 'normal-Link'}>{lang === 'en' ? 'About Us' : 'من نحن'}</Link>
           <Link href="/#soultions" className={pathname === '/#soultions' ? 'active' : 'normal-Link'}>{lang === 'en' ? 'Solutions' : 'الحلول'}</Link>
           <Link href="/#blogs" className={pathname === '/#about' ? 'active' : 'normal-Link'}>{lang === 'en' ? 'Blogs' : 'المقالات'}</Link>
-          <Link href={"/#case_studies"} className={pathname === '/#case_studies' ? 'active' : 'normal-Link'}>{lang === 'en' ? 'Case Studies' : ' المثاليات'}</Link>
+          <Link href={"/#case_studies"} className={pathname === '/#case_studies' ? 'active' : 'normal-Link'}>{lang === 'en' ? 'Case Studies' : ' قصص النجاح'}</Link>
           {
             pathname === '/' ?
               <Link href="/contact" className='book-link' >{lang === 'en' ? 'Contact us' : 'اتصل بنا'}</Link>
@@ -75,7 +75,7 @@ export default function Header() {
             <Link href="/about" className={pathname === '/about' ? 'active' : 'normal-Link'}>{lang === 'en' ? 'About' : 'من نحن'}</Link>
             <Link href="/#soultions " className={pathname === '/#soultions ' ? 'active' : 'normal-Link'}>{lang === 'en' ? 'Solutions' : 'الحلول'}</Link>
             <Link href="/#blogs" className={pathname === '/#about' ? 'active' : 'normal-Link'}>{lang === 'en' ? 'Blogs' : 'المقالات'}</Link>
-            <Link href="/#case_studies" className={pathname === '/#case_studies' ? 'active' : 'normal-Link'}>{lang === 'en' ? 'Case Studies' : ' المثاليات'}</Link>
+            <Link href="/#case_studies" className={pathname === '/#case_studies' ? 'active' : 'normal-Link'}>{lang === 'en' ? 'Case Studies' : ' قصص النجاح'}</Link>
             <Link href="/contact" className='book-link' >{lang === 'en' ? 'Contact us' : 'اتصل بنا'}</Link>
 
             <div
