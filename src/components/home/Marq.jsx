@@ -31,7 +31,7 @@ export default function Marq({ mainTitle, subTitle, data, isReverse }) { // Defi
         );
     };
     return (
-        <section className='countries-section section-with-yellow-title'>
+        <section className='countries-section section-with-yellow-title' style={{ direction: lang === 'en' ? 'ltr' : 'rtl' }}>
             <div className="text">
                 <h3>{mainTitle}</h3>
                 <h4>{subTitle}</h4>
