@@ -9,7 +9,6 @@ import { Button } from '@/components/ui/button';
 import { useRouter } from 'next/navigation';
 import PhoneInput from 'react-phone-number-input';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage, } from '@/components/ui/form';
-import { Select, SelectContent, SelectGroup, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { motion } from 'framer-motion'; // Importing the motion component from Framer Motion for animations
 import axios from 'axios';
 import { Textarea } from '../ui/textarea';
@@ -17,7 +16,6 @@ import { API_BASE_URL } from '@/lib/apiConfig';
 import { toast } from "sonner"
 export default function FormPage({ lang }) {
     const router = useRouter();
-    const [data, setData] = useState(null);
     const [loading, setLoading] = useState(false);
     const sendPostRequest = async (data) => {
         const url = `${API_BASE_URL}/landing/contact-us`;
