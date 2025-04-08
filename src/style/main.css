@@ -1432,13 +1432,13 @@ footer .served {
 }
 
 .swiper-button-next {
-  right: calc(50% - 52px) !important;
-  left: auto !important;
+  inset-inline-end: calc(50% - 52px) !important;
+  inset-inline-start: auto !important;
 }
 
 .swiper-button-prev {
-  left: calc(50% - 52px) !important;
-  right: auto !important;
+  inset-inline-start: calc(50% - 52px) !important;
+  inset-inline-end: auto !important;
 }
 
 .swiper {
