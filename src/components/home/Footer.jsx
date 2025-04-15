@@ -50,7 +50,6 @@ export default function Footer() { // Defining the main functional component nam
 
         }
     }, []);
-    console.log(data);
 
     return (
         <footer style={{ direction: lang == 'ar' ? 'rtl' : 'ltr' }}> {/* Main footer container with padding and background color */}

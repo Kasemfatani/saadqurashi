@@ -42,7 +42,6 @@ export default function Solutions() {
                 });
         }
     }, []);
-    console.log(data);
 
     return (<>
         {
