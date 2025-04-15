@@ -50,6 +50,7 @@ export default function Footer() { // Defining the main functional component nam
 
         }
     }, []);
+    console.log(data);
 
     return (
         <footer style={{ direction: lang == 'ar' ? 'rtl' : 'ltr' }}> {/* Main footer container with padding and background color */}
@@ -63,24 +64,24 @@ export default function Footer() { // Defining the main functional component nam
                             <Image src={logo} alt="Mazar" width={200} height={200} />
                         </div>
                         <div className="social-links">
-                            <div className="social">
+                            {/* <div className="social">
                                 {
                                     social?.map((item, index) =>
                                         <Link href={item.value} key={index} target='_blank'> <i className={`fa-brands fa-${item.type}`}></i></Link>
                                     )
                                 }
 
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                     <div className="links">
                         <h3>I-Masira</h3>
-                        <ul>
+                        {/* <ul>
                             <li><Link href="/#soultions">{lang === 'en' ? 'Solutions ' : 'الخدمات'}</Link></li>
                             <li><Link href="/about">{lang === 'en' ? 'About Us' : 'من نحن'}</Link></li>
                             <li><Link href="/#blogs">{lang === 'en' ? 'Blogs' : 'المقالات'}</Link></li>
                             <li><Link href="/contact">{lang === 'en' ? 'Contact us' : 'اتصل بنا'}</Link></li>
-                        </ul>
+                        </ul> */}
                     </div>
                     <div className="links">
                         <h3>{lang === 'en' ? 'Contact us' : 'اتصل بنا'}</h3>
@@ -91,10 +92,10 @@ export default function Footer() { // Defining the main functional component nam
                                         <div className="ul-cont" key={index}>
                                             <h4>{item.branch}</h4>
                                             <h4>{item.value}</h4>
-                                            <ul key={index}>
+                                            {/* <ul key={index}>
                                                 <li key={index}> <Link href={`tel:${item.mobile}`} key={index}>{item.mobile}</Link></li>
                                                 <li key={index}> <Link href={`mailto:${item.email}`} key={index}>{item.email}</Link></li>
-                                            </ul>
+                                            </ul> */}
                                         </div>
                                         : null
                                 )
