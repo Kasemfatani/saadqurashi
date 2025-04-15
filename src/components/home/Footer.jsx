@@ -90,7 +90,7 @@ export default function Footer() { // Defining the main functional component nam
                                     item.branch ?
                                         <div className="ul-cont" key={index}>
                                             <h4>{item.branch}</h4>
-                                            <h4>{item.value}</h4>
+                                            <h4>{item.branch2}</h4>
                                             <ul key={index}>
                                                 <li key={index}> <Link href={`tel:${item.mobile}`} key={index}>{item.mobile}</Link></li>
                                                 <li key={index}> <Link href={`mailto:${item.email}`} key={index}>{item.email}</Link></li>
