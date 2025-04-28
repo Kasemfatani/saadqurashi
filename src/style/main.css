@@ -1757,8 +1757,6 @@ footer .served {
   height: 100%;
   -o-object-fit: contain;
   object-fit: contain;
-  -o-object-position: left;
-  object-position: left;
 }
 .blogs .solution-card h4 {
   color: #185A7D;
