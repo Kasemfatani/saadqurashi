@@ -90,7 +90,9 @@ export default function Solutions() {
                                     <SwiperSlide key={path.id}>
                                         <ShineBorder borderWidth={3} className="relative rounded-2xl p-6 h-full" color={["#54C8E8", "#185A7D"]}>
                                             <div className="solution-card">
-                                                <Image src={path.icon} alt="Mazar" width={200} height={200} />
+                                                <div className="img-cont">
+                                                    <Image src={path.icon} alt="Mazar" width={200} height={200} />
+                                                </div>
                                                 <h4>{path.name}</h4>
                                                 <p>{path.short_description}</p>
                                                 {
