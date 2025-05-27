@@ -1,52 +1,54 @@
-'use client'
-import React, { useEffect, useState } from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
+"use client";
+import React, { useEffect, useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
-import "swiper/css/pagination"; import axios from 'axios';
-import Loading from '@/app/loading';
-import { API_BASE_URL } from '@/lib/apiConfig';
+import "swiper/css/pagination";
+import axios from "axios";
+import Loading from "@/app/loading";
+import { API_BASE_URL } from "@/lib/apiConfig";
 export default function Hero() {
-    let [lang, setLang] = useState('en');
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
-    const [data, setData] = useState([]);
-    useEffect(() => {
-        setLoading(true);
-        if (typeof window !== 'undefined') {
-            // Define the headers with the selected language
-            setLang(localStorage.getItem('lang'));
-            const headers = {
-                lang: localStorage.getItem('lang'), // Change language dynamically based on state
-            };
-            // Fetch data from the API with Axios
-            axios.get(`${API_BASE_URL}/landing/home/sliders`
-                , {
-                    headers: headers,
-                })
-                .then(response => {
-                    setData(response.data.data);  // Set the response data to state
-                    setLoading(false);  // Set loading to false
-                })
-                .catch(error => {
-                    setError(error);  // Handle any errors
-                    console.error('Error fetching data:', error);
-                    setLoading(false)
-                });
-        }
-    }, []);
+	let [lang, setLang] = useState("ar");
+	const [loading, setLoading] = useState(true);
+	const [error, setError] = useState(null);
+	const [data, setData] = useState([]);
+	useEffect(() => {
+		setLoading(true);
+		setLoading(false);
+		// if (typeof window !== 'undefined') {
+		//     Define the headers with the selected language
+		//     setLang(localStorage.getItem('lang'));
+		//     const headers = {
+		//         lang: localStorage.getItem('lang'), // Change language dynamically based on state
+		//     };
+		//     Fetch data from the API with Axios
+		//     axios.get(`${API_BASE_URL}/landing/home/sliders`
+		//         , {
+		//             headers: headers,
+		//         })
+		//         .then(response => {
+		//             setData(response.data.data);  // Set the response data to state
+		//             setLoading(false);  // Set loading to false
+		//         })
+		//         .catch(error => {
+		//             setError(error);  // Handle any errors
+		//             console.error('Error fetching data:', error);
+		//             setLoading(false)
+		//         });
 
+		// }
+	}, []);
 
-    return (
-        <>
-
-            {
-                loading ? <Loading /> :
-                    <div className="hero">
-                        <Swiper
+	return (
+		<>
+			{loading ? (
+				<Loading />
+			) : (
+				<div className="hero">
+					{/* <Swiper
                             // navigation
                             // pagination={{ type: "bullets", clickable: true }}
                             spaceBetween={24}
@@ -101,9 +103,33 @@ export default function Hero() {
                                     </SwiperSlide>
                                     : null
                             }
-                        </Swiper>
-                    </div>
-            }
-        </>
-    );
+                        </Swiper> */}
+					<div className="hero">
+						<Image
+							src="/hero-cover.png"
+							alt="hero-cover"
+							className="hero-img image-bg"
+							width={1000}
+							height={1000}
+							style={{ 
+								objectFit: "cover",
+								objectPosition: "center top",
+								
+							}}
+							priority
+						/>
+						{/* <div className="overlay">
+                                                <div className="heading">
+                                                    <h1>{data[0].title}</h1>
+                                                    <p>{data[0].description}</p>
+                                                    <div className="links">
+                                                        <Link href="/#soultions" className='sec-link'>{lang === 'en' ? 'Explore now ' : 'استكشف الان'}</Link>
+                                                    </div>
+                                                </div>
+                                            </div> */}
+					</div>
+				</div>
+			)}
+		</>
+	);
 }

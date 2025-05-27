@@ -10,33 +10,34 @@ import { API_BASE_URL } from '@/lib/apiConfig';
 
 
 export default function Who() {
-    let [lang, setLang] = useState('en');
+    let [lang, setLang] = useState('ar');
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const [data, setData] = useState([]);
     useEffect(() => {
         setLoading(true);
-        if (typeof window !== 'undefined') {
-            // Define the headers with the selected language
-            setLang(localStorage.getItem('lang'));
-            const headers = {
-                lang: localStorage.getItem('lang'), // Change language dynamically based on state
-            };
-            // Fetch data from the API with Axios
-            axios.get(`${API_BASE_URL}/landing/home/about`
-                , {
-                    headers: headers,
-                })
-                .then(response => {
-                    setData(response.data.data);  // Set the response data to state
-                    setLoading(false);  // Set loading to false
-                })
-                .catch(error => {
-                    setError(error);  // Handle any errors
-                    console.error('Error fetching data:', error);
-                    setLoading(false)
-                });
-        }
+        setLoading(false); 
+        // if (typeof window !== 'undefined') {
+        //     // Define the headers with the selected language
+        //     setLang(localStorage.getItem('lang'));
+        //     const headers = {
+        //         lang: localStorage.getItem('lang'), // Change language dynamically based on state
+        //     };
+        //     // Fetch data from the API with Axios
+        //     axios.get(`${API_BASE_URL}/landing/home/about`
+        //         , {
+        //             headers: headers,
+        //         })
+        //         .then(response => {
+        //             setData(response.data.data);  // Set the response data to state
+        //             setLoading(false);  // Set loading to false
+        //         })
+        //         .catch(error => {
+        //             setError(error);  // Handle any errors
+        //             console.error('Error fetching data:', error);
+        //             setLoading(false)
+        //         });
+        // }
     }, []);
     return (
         <>
@@ -57,7 +58,7 @@ export default function Who() {
                                     className="r-side">
                                     <div className="img-cont">
                                         <div className="overlay"></div>
-                                        <Image src={data?.about?.image} width={500} height={500} alt="Mazar" className="img-hero" />
+                                        <Image src="/who_logo.jpg" width={500} height={500} alt="Mazar" className="" />
                                     </div>
                                 </motion.div>
                                 <motion.div
@@ -70,9 +71,18 @@ export default function Who() {
                                     }}
                                     viewport={{ once: true }}
                                     className="l-side">
-                                    <h3 className='sec-title'>{data?.about?.title}</h3>
-                                    <p className='who-p'>{data?.about?.description} </p>
-                                    <Link href={'/about'} className='who-link'><span>{lang === 'en' ? 'Read More' : 'قراءة المزيد'}</span> <i className={`fa-solid fa-chevron-${lang === 'en' ? "right" : "left"}`}></i></Link>
+                                    {/* <h3 className='sec-title'>{data?.about?.title}</h3> */}
+                                    <p className='who-p'>يسرنا في شركة سعد بن جميل القرشي أن نُقدم لحجاج بيت الله الحرام هذا التطبيق المخصص، تيسيرًا للتواصل معهم، وتمكينهم من متابعة كل جديد في أداء مناسك الحج بكل سهولة ويسر.
+
+لقد سَعينا جاهدين على مدار الأعوام الماضية إلى تحقيق رضا الله تعالى أولًا، ثم رضا عملائنا الكرام، عبر تقديم أفضل الخدمات التي تليق بمقام ضيوف الرحمن.
+
+وإيمانًا منا برسالتنا السامية، كان شعارنا الذي نسعى لتحقيقه بكل إخلاص:
+
+"عملنا من أجلكم، لنكون لكم، وتكونوا لنا."
+
+نسأل الله أن يجعل أعمالنا خالصةً لوجهه الكريم، وأن يتقبل من الجميع صالح الأعمال، وأن ييسر لكم حجكم ويكتب لكم العودة سالمين غانمين.
+ </p>
+                                    
                                 </motion.div>
                             </div>
                         </div>

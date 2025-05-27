@@ -12,16 +12,16 @@ export default function Home() {
   return (
     <main>
      <Hero />
-     <Solutions />
+     {/* <Solutions /> */}
      <Who />
-     <Ncit />
+     {/* <Ncit />
      <Why />
      <Partners />
      <CaseStudies />
      <div className="main-touch">
      <Touch text= 'non' />
      </div>
-     <Blogs />
+     <Blogs /> */}
     </main>
   );
 }
