@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import type { Metadata } from 'next';
 import './globals.css';
 import './video-react.css';
@@ -6,29 +5,25 @@ import Header from '@/components/header/Header';
 import Footer from '@/components/home/Footer';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import '../style/main.css';
-import { Toaster } from "@/components/ui/sonner"
-import logo from '/public/logo.png'
-import { getSeoData } from '@/lib/getSeoData';
+import { Toaster } from "@/components/ui/sonner";
+import new_logo from '/public/new-logo.png';
 
-// ✅ Fetch metadata dynamically from the API
 export async function generateMetadata(): Promise<Metadata> {
-  const seoData = await getSeoData(); // Fetch data on the server
   return {
-    title: seoData?.seo_title || 'i-Masirssssa',
-    description: seoData?.seo_description || "i-Masira is a Saudi-based industrial solutions provider dedicated to driving the digital transformation of factories and enterprises across the Kingdom. With a focus on delivering cutting-edge technologies, strategic consultancy, and advanced training, we empower businesses to embrace Industry 4.0 and optimize every aspect of their operations.Aligns with Saudi Arabia’s National Transformation Plan and the Saudi Vision 2030 development agenda aims to transform local industries into Smart Industry standard.",
-    keywords: seoData?.seo_keywords || "SCADA, SIRI ASSESSMENT",
+    title: 'شركة سعد جميل القرشي',
+    description: "شركة سعد جميل القرشي",
+    keywords: "شركة سعد جميل القرشي",
     openGraph: {
-      title: seoData?.seo_title || 'i-Masira',
-      description: seoData?.seo_description || "i-Masira is a Saudi-based industrial solutions provider dedicated to driving the digital transformation of factories and enterprises across the Kingdom. With a focus on delivering cutting-edge technologies, strategic consultancy, and advanced training, we empower businesses to embrace Industry 4.0 and optimize every aspect of their operations.Aligns with Saudi Arabia’s National Transformation Plan and the Saudi Vision 2030 development agenda aims to transform local industries into Smart Industry standard.",
-      url: 'https://i-masira.com/',
-      siteName: "i-Masira",
+      title: "شركة سعد جميل القرشي",
+      description: "شركة سعد جميل القرشي",
+      url: '',
+      siteName: "شركة سعد جميل القرشي",
       images: [
         {
-          // url: seoData?.seo_image || logo.src ,
-          url:  logo.src ,
+          url: new_logo.src,
           width: 1200,
           height: 630,
-          alt: 'i-Masira',
+          alt: "شركة سعد جميل القرشي",
         },
       ],
       type: 'website',
@@ -36,19 +31,20 @@ export async function generateMetadata(): Promise<Metadata> {
     },
   };
 }
+
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
-  
+}) {
   return (
-    <html lang="en" id="root">
-      <Head>
-        {/* Google Fonts */}
+    <html lang="ar" id="root" dir="rtl">
+      <head>
+        
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      </Head>
+        <link rel="icon" href="/new-logo.png" /> {/* Favicon */}
+      </head>
       <body className="w-full" suppressHydrationWarning={true}>
         <Header />
         {children}
