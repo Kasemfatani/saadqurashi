@@ -40,10 +40,10 @@ export default function RootLayout({
   return (
     <html lang="ar" id="root" dir="rtl">
       <head>
-        
+        <meta name="facebook-domain-verification" content="01paj7mvvqkphps5bwjhbrwjxouepi" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="icon" href="/new-logo.png" /> {/* Favicon */}
+        <link rel="icon" href="/new-logo.png" /> 
       </head>
       <body className="w-full" suppressHydrationWarning={true}>
         <Header />
